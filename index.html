@@ -1,628 +1,627 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light" data-page-node-id="ROkqJqzCPi8vHVuDcFBXnF">
-<head data-page-node-id="8BYzBfkwbCa1VDpeXrfYe4">
-<meta charset="UTF-8" data-page-node-id="eRVCm2k4ubJj1AHhEs1LBx" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="3DxUT2N7rF5MHQXfz0G735" />
-<meta name="description" content="吴瑶誉 · 品牌营销实习生 · 华中师范大学新闻与传播硕士在读" data-page-node-id="rhWCalhua8ANFBz8mZMrqm" />
-<meta name="theme-color" content="#1f4e5f" data-page-node-id="NAmsqpVIYS3TsSuhLDqmCf" />
-<title>吴瑶誉 · 品牌营销实习生</title>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="吴瑶誉（饭饭）· 4 周 × AI × 实习作品集 · 北辰青年第五组 · 2026 暑期线上实习">
+<title>饭饭的作品集 · 4 周 × AI × 实习</title>
 <style>
-  /* ============ Design Tokens ============ */
-  :root {
-    --bg: #fafaf6;
-    --surface: #ffffff;
-    --ink: #1a1a1a;
-    --ink-soft: #4a4a4a;
-    --muted: #8a8a8a;
-    --line: #ececec;
-    --line-strong: #d6d6d0;
-    --accent: #1f4e5f;
-    --accent-soft: #e9f0f3;
-    --highlight: #d97757;
-    --highlight-soft: #fbeee6;
-    --radius: 4px;
-    --max-w: 1080px;
-    --shadow: 0 1px 3px rgba(0,0,0,0.04);
-    --t: 0.25s ease;
-  }
-  [data-theme="dark"] {
-    --bg: #14181c;
-    --surface: #1c2227;
-    --ink: #f0f0ec;
-    --ink-soft: #c2c2bd;
-    --muted: #8a8e93;
-    --line: #2a3137;
-    --line-strong: #3a4147;
-    --accent: #7eb6c4;
-    --accent-soft: #1f2c30;
-    --highlight: #e8a585;
-    --highlight-soft: #2c231d;
-    --shadow: 0 1px 3px rgba(0,0,0,0.3);
-  }
+/* ============ 马卡龙风作品集 ============ */
+:root{
+  --bg-cream:#FBF6EC;
+  --bg-paper:#FFFAF0;
+  --bg-warm:#FFF4D6;
+  --ink-dark:#2D4A3E;
+  --ink-mid:#3A3A3A;
+  --ink-light:#7A8C82;
+  --accent-mint:#A8E6CF;
+  --accent-mint-deep:#5BC0BE;
+  --accent-pink:#FFD6E0;
+  --accent-coral:#FFB7C5;
+  --accent-rose:#FFA8B8;
+  --accent-yellow:#FFD580;
+  --accent-peach:#FFCBA4;
+  --line-soft:#E8DDC8;
 
-  /* ============ Reset & Base ============ */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Inter", "Helvetica Neue", Arial, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.7;
-    font-size: 16px;
-    transition: background var(--t), color var(--t);
-  }
-  a { color: inherit; text-decoration: none; transition: color var(--t); }
-  a:hover { color: var(--accent); }
-  ::selection { background: var(--accent); color: #fff; }
-  img { max-width: 100%; display: block; }
-  button { font-family: inherit; cursor: pointer; }
+  --font-cn:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",sans-serif;
+  --font-round:"Hiragino Maru Gothic ProN","Yuanti SC","PingFang SC",sans-serif;
 
-  /* ============ Layout ============ */
-  .layout {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 64px 40px 96px;
-    gap: 80px;
-    align-items: start;
-  }
+  --radius-lg:20px;
+  --radius-md:14px;
+  --radius-sm:10px;
+  --shadow-soft:0 4px 18px rgba(45,74,62,.08);
+  --shadow-hover:0 10px 32px rgba(45,74,62,.18);
+  --transition:cubic-bezier(.4,0,.2,1) .32s;
+}
 
-  /* ============ Side Nav ============ */
-  .sidenav {
-    position: sticky;
-    top: 64px;
-    font-size: 14px;
-  }
-  .sidenav .brand { font-size: 18px; font-weight: 700; letter-spacing: 0.5px; }
-  .sidenav .brand small { display: block; font-size: 12px; color: var(--muted); font-weight: 400; margin-top: 4px; letter-spacing: 1px; }
-  .sidenav nav { margin-top: 36px; }
-  .sidenav nav a {
-    display: block;
-    padding: 6px 0 6px 14px;
-    color: var(--ink-soft);
-    border-left: 2px solid var(--line);
-    transition: border-color var(--t), color var(--t);
-  }
-  .sidenav nav a:hover,
-  .sidenav nav a.is-active {
-    color: var(--accent);
-    border-left-color: var(--accent);
-  }
-  .sidenav .tools { margin-top: 32px; display: flex; gap: 8px; align-items: center; }
-  .sidenav .tools button {
-    width: 32px; height: 32px;
-    border: 1px solid var(--line);
-    border-radius: 50%;
-    background: var(--surface);
-    color: var(--ink-soft);
-    display: grid; place-items: center;
-    transition: border-color var(--t), color var(--t);
-  }
-  .sidenav .tools button:hover { border-color: var(--accent); color: var(--accent); }
-  .sidenav .tools svg { width: 16px; height: 16px; }
-  .sidenav .download-link {
-    display: inline-flex; align-items: center; gap: 6px;
-    margin-top: 20px;
-    padding: 8px 14px;
-    border: 1px solid var(--ink);
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--ink);
-    transition: background var(--t), color var(--t);
-  }
-  .sidenav .download-link:hover { background: var(--ink); color: var(--bg); }
-  .sidenav .download-link svg { width: 14px; height: 14px; }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-cn);
+  color:var(--ink-mid);
+  background:var(--bg-cream);
+  line-height:1.8;
+  overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 12% 12%,rgba(255,214,224,.35) 0,transparent 18%),
+    radial-gradient(circle at 92% 8%,rgba(168,230,207,.30) 0,transparent 20%),
+    radial-gradient(circle at 50% 92%,rgba(255,247,214,.45) 0,transparent 22%);
+}
 
-  /* ============ Hero ============ */
-  .hero { padding-bottom: 16px; }
-  .hero h1 {
-    font-size: 56px;
-    font-weight: 700;
-    letter-spacing: -1px;
-    line-height: 1.15;
-  }
-  .hero h1 .accent-dot { color: var(--highlight); }
-  .hero .role {
-    margin-top: 14px;
-    font-size: 18px;
-    color: var(--ink-soft);
-  }
-  .hero .role b { color: var(--accent); font-weight: 600; }
-  .hero .tagline {
-    margin-top: 28px;
-    font-size: 16px;
-    color: var(--ink-soft);
-    max-width: 560px;
-  }
-  .hero .meta {
-    margin-top: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px 28px;
-    font-size: 13px;
-    color: var(--muted);
-  }
-  .hero .meta span { display: inline-flex; align-items: center; gap: 6px; }
-  .hero .meta svg { width: 14px; height: 14px; }
-  .hero .cta { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 12px 22px;
-    border-radius: 999px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: transform var(--t), background var(--t), color var(--t), border-color var(--t);
-  }
-  .btn-primary { background: var(--ink); color: var(--bg); }
-  .btn-primary:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
-  .btn-ghost { border: 1px solid var(--line-strong); color: var(--ink); }
-  .btn-ghost:hover { border-color: var(--ink); transform: translateY(-1px); }
-  .btn svg { width: 16px; height: 16px; }
+.container{max-width:1100px;margin:0 auto;padding:0 28px;}
+section{padding:96px 0;position:relative;}
+h1,h2,h3,h4{font-family:var(--font-cn);color:var(--ink-dark);font-weight:700;letter-spacing:.3px;}
+h1{font-size:3.6rem;line-height:1.2;}
+h2{font-size:2.4rem;margin-bottom:10px;}
+.section-tag{display:inline-block;font-size:.85rem;color:var(--ink-light);background:var(--bg-paper);border:1px solid var(--line-soft);padding:6px 14px;border-radius:99px;margin-bottom:14px;letter-spacing:.6px;}
+.section-head{text-align:center;margin-bottom:64px;}
+.section-sub{text-align:center;color:var(--ink-light);margin-top:14px;font-size:1rem;max-width:560px;margin-left:auto;margin-right:auto;}
+.emoji{font-family:"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-style:normal;}
 
-  /* ============ Sections ============ */
-  section { margin-top: 72px; scroll-margin-top: 32px; }
-  section:first-of-type { margin-top: 0; }
-  section .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; }
-  section h2 {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
-  section .section-head .count {
-    font-size: 12px;
-    color: var(--muted);
-    font-feature-settings: "tnum";
-  }
+/* ============ 顶部导航 ============ */
+.nav{
+  position:sticky;top:0;z-index:100;
+  backdrop-filter:blur(14px);
+  background:rgba(251,246,236,.85);
+  border-bottom:1px solid var(--line-soft);
+  padding:14px 0;
+}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;}
+.nav-brand{font-weight:700;color:var(--ink-dark);font-size:1.05rem;display:flex;align-items:center;gap:8px;}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:var(--ink-mid);text-decoration:none;font-size:.9rem;position:relative;padding:4px 0;}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--accent-mint-deep);transition:width var(--transition);}
+.nav-links a:hover::after{width:100%;}
+.nav-links a:active{color:var(--ink-dark);}
+@media(max-width:760px){
+  .nav-links{display:none;}
+  h1{font-size:2.4rem;}
+  h2{font-size:1.7rem;}
+  section{padding:64px 0;}
+}
 
-  /* ============ About ============ */
-  .about p { color: var(--ink-soft); max-width: 620px; }
-  .about p + p { margin-top: 16px; }
+/* ============ Hero 封面 ============ */
+.hero{
+  min-height:92vh;
+  display:flex;align-items:center;
+  position:relative;
+  padding-top:80px;
+  padding-bottom:60px;
+}
+.hero-card{
+  background:var(--bg-paper);
+  border-radius:var(--radius-lg);
+  padding:64px 56px;
+  box-shadow:var(--shadow-soft);
+  position:relative;
+  border:1.5px solid var(--line-soft);
+  overflow:hidden;
+}
+.tape{
+  position:absolute;
+  width:96px;height:24px;
+  background:repeating-linear-gradient(45deg,rgba(255,183,197,.7),rgba(255,183,197,.7) 4px,transparent 4px,transparent 12px),rgba(255,214,224,.55);
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+.tape-1{top:-10px;left:64px;transform:rotate(-4deg);}
+.tape-2{top:-10px;right:80px;transform:rotate(5deg);background:repeating-linear-gradient(45deg,rgba(168,230,207,.7),rgba(168,230,207,.7) 4px,transparent 4px,transparent 12px),rgba(168,230,207,.4);}
+.tape-3{bottom:30px;right:-20px;width:120px;transform:rotate(-12deg);opacity:.85;}
+.hero-pretitle{
+  display:inline-block;
+  font-size:.85rem;letter-spacing:1.6px;
+  color:var(--accent-mint-deep);
+  margin-bottom:14px;font-weight:600;
+}
+.hero h1{margin-bottom:18px;}
+.hero h1 .accent{color:var(--accent-mint-deep);}
+.hero-desc{font-size:1.06rem;color:var(--ink-mid);max-width:680px;margin:14px 0 28px;}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:10px 18px;
+  font-size:.95rem;color:var(--ink-light);
+  border-top:1px dashed var(--line-soft);
+  padding-top:22px;margin-top:10px;
+}
+.hero-meta div{display:inline-flex;align-items:center;gap:6px;}
+.hero-meta strong{color:var(--ink-dark);font-weight:600;}
+.hero-tags{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px;}
+.tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--bg-warm);color:var(--ink-dark);
+  padding:6px 14px;border-radius:99px;
+  font-size:.85rem;font-weight:500;
+  border:1px solid var(--line-soft);
+}
+.tag.mint{background:var(--accent-mint);}
+.tag.pink{background:var(--accent-pink);}
 
-  /* ============ Education ============ */
-  .edu {
-    display: grid;
-    grid-template-columns: 130px 1fr;
-    gap: 24px;
-    padding: 18px 0;
-    border-top: 1px solid var(--line);
-  }
-  .edu:last-child { border-bottom: 1px solid var(--line); }
-  .edu .date { font-size: 13px; color: var(--muted); font-feature-settings: "tnum"; padding-top: 2px; }
-  .edu .school { font-size: 17px; font-weight: 600; }
-  .edu .degree { color: var(--ink-soft); font-size: 14px; margin-top: 4px; }
-  .edu .tag {
-    display: inline-block;
-    margin-top: 6px;
-    font-size: 11px;
-    padding: 2px 8px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-radius: 999px;
-    letter-spacing: 0.5px;
-  }
-  .edu .notes { margin-top: 12px; font-size: 14px; color: var(--ink-soft); }
-  .edu .notes li { padding-left: 18px; position: relative; margin-bottom: 4px; }
-  .edu .notes li::before { content: "—"; position: absolute; left: 0; color: var(--muted); }
-  .edu ul { list-style: none; }
+/* ============ 4 件作品网格 ============ */
+.works{display:grid;grid-template-columns:1fr;gap:38px;margin-top:8px;}
+.work{
+  background:var(--bg-paper);
+  border-radius:var(--radius-lg);
+  padding:40px 44px;
+  box-shadow:var(--shadow-soft);
+  border:1.5px solid var(--line-soft);
+  position:relative;
+  transition:transform var(--transition), box-shadow var(--transition);
+}
+.work:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);}
+.work-num{
+  position:absolute;top:-18px;left:36px;
+  width:48px;height:48px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent-mint-deep),var(--accent-mint));
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:1.2rem;
+  box-shadow:0 4px 12px rgba(91,192,190,.4);
+  border:3px solid var(--bg-cream);
+}
+.work-meta{
+  display:flex;flex-wrap:wrap;gap:8px 16px;
+  font-size:.85rem;color:var(--ink-light);
+  margin-bottom:10px;
+}
+.work-meta span{display:inline-flex;align-items:center;gap:5px;}
+.work-title{font-size:1.45rem;margin-bottom:6px;}
+.work-subtitle{color:var(--ink-light);font-size:.95rem;margin-bottom:20px;}
+.work-section{margin-top:18px;}
+.work-label{
+  display:inline-block;
+  font-size:.78rem;font-weight:700;
+  color:var(--ink-dark);
+  background:var(--accent-mint);
+  padding:3px 12px;border-radius:99px;
+  margin-bottom:8px;letter-spacing:.4px;
+}
+.work-section p{color:var(--ink-mid);font-size:.98rem;}
+.work-section ul{padding-left:20px;color:var(--ink-mid);}
+.work-section li{margin-bottom:5px;font-size:.96rem;}
+.work-section.judge{background:var(--bg-warm);border-radius:var(--radius-md);padding:14px 18px;}
+.work-section.judge .work-label{background:var(--accent-coral);}
+.work-section.ai{background:rgba(168,230,207,.18);border-radius:var(--radius-md);padding:14px 18px;}
+.work-section.ai .work-label{background:var(--accent-mint-deep);color:#fff;}
+.work-cta{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:18px;
+  padding:10px 18px;border-radius:99px;
+  background:var(--ink-dark);color:#fff;text-decoration:none;
+  font-size:.9rem;font-weight:500;
+  transition:transform var(--transition), background var(--transition);
+}
+.work-cta:hover{transform:translateY(-2px);background:var(--accent-mint-deep);}
 
-  /* ============ Experience ============ */
-  .exp {
-    padding: 24px 0;
-    border-top: 1px solid var(--line);
-  }
-  .exp:last-child { border-bottom: 1px solid var(--line); }
-  .exp-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; }
-  .exp-head .title { font-size: 17px; font-weight: 600; }
-  .exp-head .org { display: block; font-size: 13px; color: var(--muted); font-weight: 400; margin-top: 2px; }
-  .exp-head .period { font-size: 13px; color: var(--muted); font-feature-settings: "tnum"; }
-  .exp ul { margin-top: 14px; list-style: none; }
-  .exp li {
-    position: relative;
-    padding-left: 18px;
-    margin-bottom: 10px;
-    font-size: 14.5px;
-    color: var(--ink-soft);
-    line-height: 1.75;
-  }
-  .exp li::before { content: ""; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-  .exp li b { color: var(--ink); font-weight: 600; }
-  .exp .highlight-num { color: var(--highlight); font-weight: 600; font-feature-settings: "tnum"; }
+/* ============ 成长轨迹 ============ */
+.timeline{
+  position:relative;
+  margin-top:30px;
+  padding:0 4px;
+}
+.timeline::before{
+  content:"";
+  position:absolute;left:28px;top:0;bottom:0;width:2px;
+  background:repeating-linear-gradient(180deg,var(--accent-mint-deep) 0,var(--accent-mint-deep) 8px,transparent 8px,transparent 18px);
+}
+.skill{
+  position:relative;
+  margin-left:70px;margin-bottom:42px;
+  background:var(--bg-paper);
+  border-radius:var(--radius-lg);
+  padding:24px 28px;
+  box-shadow:var(--shadow-soft);
+  border:1.5px solid var(--line-soft);
+  transition:transform var(--transition),box-shadow var(--transition);
+}
+.skill:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover);}
+.skill-dot{
+  position:absolute;left:-52px;top:28px;
+  width:24px;height:24px;border-radius:50%;
+  background:var(--accent-pink);
+  border:4px solid var(--bg-cream);
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.skill.forming .skill-dot{background:var(--accent-mint-deep);}
+.skill-week{
+  display:inline-block;
+  font-size:.78rem;font-weight:700;
+  background:var(--ink-dark);color:#fff;
+  padding:4px 12px;border-radius:99px;
+  margin-bottom:8px;letter-spacing:.4px;
+}
+.skill.forming .skill-week{background:var(--accent-mint-deep);}
+.skill-name{font-size:1.2rem;margin-bottom:10px;color:var(--ink-dark);}
+.skill-row{margin-top:8px;display:grid;grid-template-columns:90px 1fr;gap:14px;align-items:start;font-size:.93rem;}
+.skill-row .k{
+  font-weight:600;color:var(--ink-dark);
+  font-size:.85rem;letter-spacing:.3px;
+}
+.skill-row .v{color:var(--ink-mid);}
+.skill-row .v ul{padding-left:18px;}
 
-  /* ============ Skills ============ */
-  .skills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 40px;
-  }
-  .skill-group .label {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-  .skill-group p { font-size: 14.5px; color: var(--ink-soft); }
-  .skill-group .tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
-  .skill-group .tags span {
-    font-size: 12px;
-    padding: 3px 10px;
-    border: 1px solid var(--line-strong);
-    border-radius: 999px;
-    color: var(--ink-soft);
-  }
+/* ============ 底部 ============ */
+.footer{
+  text-align:center;padding:60px 0 50px;color:var(--ink-light);
+  font-size:.9rem;border-top:1px dashed var(--line-soft);margin-top:40px;
+}
+.footer p{margin:4px 0;}
 
-  /* ============ Contact Footer ============ */
-  .contact-foot {
-    margin-top: 96px;
-    padding-top: 40px;
-    border-top: 1px solid var(--line);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 24px;
-    font-size: 13px;
-    color: var(--muted);
-  }
-  .contact-foot .links { display: flex; gap: 20px; }
-  .contact-foot .links a:hover { color: var(--accent); }
-
-  /* ============ Reveal Animation ============ */
-  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal.is-visible { opacity: 1; transform: none; }
-
-  /* ============ Mobile Menu Toggle (hidden on desktop) ============ */
-  .menu-btn { display: none; }
-
-  /* ============ Responsive ============ */
-  @media (max-width: 860px) {
-    .layout { grid-template-columns: 1fr; padding: 24px 22px 80px; gap: 24px; }
-    .sidenav {
-      position: sticky; top: 0;
-      background: var(--bg);
-      padding: 14px 0;
-      z-index: 10;
-      border-bottom: 1px solid var(--line);
-      margin: -24px -22px 0;
-      padding: 14px 22px;
-    }
-    .sidenav .brand { display: flex; justify-content: space-between; align-items: center; }
-    .sidenav .menu-btn {
-      display: grid;
-      width: 36px; height: 36px;
-      place-items: center;
-      border: 1px solid var(--line-strong);
-      border-radius: 8px;
-      background: var(--surface);
-      color: var(--ink);
-    }
-    .sidenav .menu-btn svg { width: 18px; height: 18px; }
-    .sidenav nav,
-    .sidenav .tools,
-    .sidenav .download-link {
-      display: none;
-    }
-    .sidenav.is-open nav,
-    .sidenav.is-open .download-link { display: block; }
-    .sidenav.is-open .tools { display: flex; }
-    .sidenav.is-open nav { margin-top: 20px; }
-    .hero h1 { font-size: 40px; }
-    .hero .role { font-size: 16px; }
-    .skills { grid-template-columns: 1fr; gap: 24px; }
-    .edu { grid-template-columns: 1fr; gap: 8px; }
-    .edu .date { padding-top: 0; }
-  }
-  @media (max-width: 480px) {
-    .hero h1 { font-size: 34px; }
-    .layout { padding: 20px 18px 64px; }
-  }
+/* ============ 移动端 ============ */
+@media(max-width:760px){
+  .container{padding:0 18px;}
+  .hero-card{padding:42px 24px;}
+  .work{padding:28px 22px;}
+  .skill{margin-left:48px;padding:18px 18px;}
+  .timeline::before{left:18px;}
+  .skill-dot{left:-40px;width:20px;height:20px;}
+  .skill-row{grid-template-columns:1fr;gap:4px;}
+  .skill-row .k{margin-top:6px;}
+  .nav-links{display:none;}
+  h1{font-size:2.2rem;}
+  h2{font-size:1.5rem;}
+}
 </style>
 </head>
-<body data-page-node-id="ZEZvw4pUHH6St1jEMYubkZ">
-<div class="layout" data-page-node-id="eD2ob5ucjf0C0vwZ52069c">
+<body>
 
-  <!-- ============ Side Nav ============ -->
-  <aside class="sidenav" id="sidenav" data-page-node-id="sqVvPjuE93KRtfQtcy8NUA">
-    <div class="brand" data-page-node-id="GuUJFuRLN66ixVZQfRLGwA">
-      <div data-page-node-id="CAF3G44hfFsE0gJOTHiJqE">
-        吴瑶誉<span style="color: var(--highlight)" data-page-node-id="YpURLNOcW4A1acbKcs39Ne">.</span>
-        <small data-page-node-id="xxJ2mdfmfxFKAVUTth29EB">FANFAN · PORTFOLIO</small>
+<!-- ========== 顶部导航 ========== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="nav-brand"><span class="emoji">🌿</span> 饭饭的作品集</div>
+    <ul class="nav-links">
+      <li><a href="#hero">封面</a></li>
+      <li><a href="#works">4 件作品</a></li>
+      <li><a href="#growth">AI 成长轨迹</a></li>
+      <li><a href="#footer">联系</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ========== 封面 ========== -->
+<header class="hero" id="hero">
+  <div class="container">
+    <div class="hero-card">
+      <div class="tape tape-1"></div>
+      <div class="tape tape-2"></div>
+      <div class="tape tape-3"></div>
+
+      <div class="hero-pretitle">2026 暑期 · 北辰青年第五组</div>
+      <h1>4 周 × AI × 实习<br><span class="accent">饭饭的一份实战笔记</span></h1>
+      <p class="hero-desc">
+        这是我在北辰青年 2026 暑期线上实习（第二期）的个人作品集。
+        4 周里，我和我的小组围绕真实招募项目跑了一遍：调研 → 洞察 → 招新 → 面试。
+        AI 是我的协作伙伴，但它从不是替我做决定的那一个。
+      </p>
+
+      <div class="hero-meta">
+        <div><span class="emoji">👋</span> <strong>吴瑶誉</strong>（昵称 饭饭）</div>
+        <div><span class="emoji">🎓</span> 华中师范大学 · 新闻与传播 · 研二</div>
+        <div><span class="emoji">🗓</span> 2026.08 — 2026.09</div>
+        <div><span class="emoji">🏷</span> 北辰青年第五组</div>
       </div>
-      <button class="menu-btn" id="menuBtn" aria-label="切换导航" data-page-node-id="t83VUVjFHhYE2gptwKRDis">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="mmI0LnU7QJlPeNwo2WTaP0"><path d="M3 6h18M3 12h18M3 18h18" data-page-node-id="Ahxy5ZpJtvrFcXgVS7PQmh"/></svg>
-      </button>
+
+      <div class="hero-tags">
+        <span class="tag mint">⚡ 快而稳</span>
+        <span class="tag pink">🧭 统筹</span>
+        <span class="tag mint">🗣 沟通强</span>
+        <span class="tag">⏰ 提前量 = 安全感</span>
+        <span class="tag pink">🤖 AI 协作</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== 模块 1：4 件作品 ========== -->
+<section id="works">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">MODULE 01 · 线上实习成果</span>
+      <h2>我的 4 件作品</h2>
+      <p class="section-sub">前三周里，我和我的小组用 AI 协作完成的所有产出。每件作品都从「任务背景 / 我的角色 / AI 如何参与 / 最终成果 / 个人判断」五要素展开。</p>
     </div>
 
-    <nav aria-label="主导航" data-page-node-id="XFsRCnGKZu4QSJhh9DxTy2">
-      <a href="#about" data-page-node-id="WtJdvYGZTQpqbZpdy7DgH4">关于</a>
-      <a href="#education" data-page-node-id="coudBIKM3tMD5pSwll5iAO">教育</a>
-      <a href="#experience" data-page-node-id="q8chqSHgxG2XkVmsMwds3o">实习</a>
-      <a href="#projects" data-page-node-id="NjUNI8irHcEwRLxHwdckd5">项目</a>
-      <a href="#skills" data-page-node-id="rpCFlGCEdE234HeUcZu1AG">技能</a>
-      <a href="#contact" data-page-node-id="mxIGDGr9lBUgflFrQAV1OY">联系</a>
-    </nav>
+    <div class="works">
 
-    <div class="tools" role="group" aria-label="工具栏" data-page-node-id="iA0Cqb3bahREFhJsSEaej8">
-      <button id="themeBtn" aria-label="切换明暗主题" data-page-node-id="GWvK52dJeUACAvTOaER1F2">
-        <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="Pn7IeP2nEe6zUBVOM1wg0a"><circle cx="12" cy="12" r="4" data-page-node-id="swvnF39lC8rsOOPkFs1pDN"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" data-page-node-id="WeDj1uTISC8CzDcBAphTVM"/></svg>
-      </button>
+      <!-- ====== 作品 1 ====== -->
+      <article class="work">
+        <div class="work-num">01</div>
+        <div class="work-meta">
+          <span><span class="emoji">📅</span> 第 1 周</span>
+          <span><span class="emoji">🛠</span> 个人说明书 · 飞书公开文档</span>
+        </div>
+        <h3 class="work-title">AI 时代个人说明书</h3>
+        <p class="work-subtitle">把零散经历整理成一份「入职清单」—— 让小组知道怎么和我一起做事。</p>
+
+        <div class="work-section">
+          <div class="work-label">任务背景</div>
+          <p>进入新团队的第一步不是马上开始做事，而是让彼此知道我们可以怎样一起做事。
+          这一周要完成一份《AI 时代个人说明书》——
+          借助 AI 做一次更深入的自我访谈，把零散的经历、习惯、感受，整理成一份真实、清晰、可供协作的"入职清单"。
+          共 <strong>7 个核心模块</strong>：身份定位 / 任务系统 / 沟通系统 / 反馈系统 / 压力预警系统 / 支持系统 / 团队使用说明。</p>
+        </div>
+
+        <div class="work-section">
+          <div class="work-label">我的角色</div>
+          <p>100% 自己是这本说明书的"被采访者"——AI 仅是采访者和语言整理者。
+          我做的事：决定哪些经历要讲、用什么口径讲、给团队看到什么。</p>
+        </div>
+
+        <div class="work-section ai">
+          <div class="work-label">AI 如何参与</div>
+          <ul>
+            <li>让 AI 像采访者一样向我提问（自动生成后续问题）</li>
+            <li>让 AI 提炼 3–5 个个人关键词</li>
+            <li>让 AI 把口语化回答整理得更清楚</li>
+            <li>输出一份内部完整版 + 一份对外简洁版</li>
+          </ul>
+        </div>
+
+        <div class="work-section">
+          <div class="work-label">最终成果</div>
+          <p>飞书公开文档，7 模块完整。提交格式满足"能看出使用了 AI 辅助梳理"，且最终版本必须由我自己判断 / 修改 / 表达。提交时还附上"本周在小组任务中负责的板块"。</p>
+        </div>
+
+        <div class="work-section judge">
+          <div class="work-label">个人判断</div>
+          <p>这是一份"入职清单"，不是兴趣展示页。
+          AI 帮我整理语言，但<strong>每一条是否"像我"必须由我自己确认</strong>——
+          题目里"无法照搬 AI 初稿"是我学到的重要规则。</p>
+        </div>
+      </article>
+
+      <!-- ====== 作品 2 ====== -->
+      <article class="work">
+        <div class="work-num">02</div>
+        <div class="work-meta">
+          <span><span class="emoji">📅</span> 第 2 周</span>
+          <span><span class="emoji">🛠</span> 调研报告 · 264 份问卷 + 23 份访谈</span>
+        </div>
+        <h3 class="work-title">大学生群体洞察报告</h3>
+        <p class="work-subtitle">面向真实招募项目，按人群分层完成的用户调研与洞察。</p>
+
+        <div class="work-section">
+          <div class="work-label">任务背景</div>
+          <p>第二周拿到一个真实项目：<strong>了解北辰青年校园团队、产出招募物料并通过真实发布验证效果</strong>。
+          在做物料之前要先做"大学生群体洞察"——把目标用户的真实需求、顾虑、不行动的原因搞清楚。
+          团队 8 人，按人群分层（初探型 / 蓄力型 / 实战型）分为三组并行调研。</p>
+        </div>
+
+        <div class="work-section">
+          <div class="work-label">我的角色</div>
+          <ul>
+            <li>调研组：全程参与问卷发放、回收、整理（团队共 <strong>264 份有效问卷</strong>）</li>
+            <li>公开平台采样 + 同类招新内容对比</li>
+            <li>独立完成 <strong>蓄力型人群深度访谈</strong>（含 1 小时访谈"戈戈"）</li>
+            <li>成长测试体系打磨：校对测试题目、优化选项、核对计分边界</li>
+          </ul>
+        </div>
+
+        <div class="work-section ai">
+          <div class="work-label">AI 如何参与</div>
+          <ul>
+            <li>把访谈原话归类成维度（基本信息 / 关键行为事件 / 访谈员洞察）</li>
+            <li>把零散洞察整理成"用户痛点 ↔ 项目能怎么回应"对应表</li>
+            <li>提供洞察的多版本表达，让我和小组成员挑选最贴近真实的一条</li>
+            <li>严格守住边界：在没有真实信息时，不让 AI 编造"用户洞察"</li>
+          </ul>
+        </div>
+
+        <div class="work-section">
+          <div class="work-label">最终成果</div>
+          <p>第五组《大学生群体洞察报告》——
+          基于 <strong>264 份有效问卷 + 23 份结构化访谈</strong> 写成。
+          用于支撑后续所有招新文案、招募官网、互动测试的方向。</p>
+        </div>
+
+        <div class="work-section judge">
+          <div class="work-label">个人判断</div>
+          <p>我做的关键洞察：原本以为经历丰富的学生优先看重证书、履历镀金，<strong>但受访者优先看重"真实能力成长"</strong>——
+          这个洞察反过来影响了整组的招新文案方向。
+          我学到：AI 不能在没有真实信息时编造洞察；<strong>"我觉得大家都……"不算真实依据</strong>。</p>
+        </div>
+      </article>
+
+      <!-- ====== 作品 3 ====== -->
+      <article class="work">
+        <div class="work-num">03</div>
+        <div class="work-meta">
+          <span><span class="emoji">📅</span> 第 2 周</span>
+          <span><span class="emoji">🛠</span> 招募官网 · GitHub Pages 已上线</span>
+        </div>
+        <h3 class="work-title">校园招新物料：招募官网 + 成长状态测试</h3>
+        <p class="work-subtitle">基于洞察报告产出的可发布、可追踪的整站物料。</p>
+
+        <div class="work-section">
+          <div class="work-label">任务背景</div>
+          <p>基于第二周洞察报告，团队要把招新做成可发布的物料，并在真实渠道上做发布 → 收数据 → 复盘。
+          招募官网要求覆盖<strong>六屏核心内容</strong>：用户洞察、成长共鸣、项目价值、真实任务、成员案例、报名指引。
+          任务里有一句很重要的话：避免空泛宣传，用真实数据 / 真实案例 / 真实用户痛点支撑页面内容。</p>
+        </div>
+
+        <div class="work-section">
+          <div class="work-label">我的角色</div>
+          <p><strong>整站制作与运行负责人</strong>（饭饭 2026-09-02 确认口径）：
+          队友把海报和设计网站所需内容整理好交给我，我负责整合 + 修改（其中对 Logo 进行反复改版），
+          <strong>独立完成整站制作与运行</strong>，把它转化为可点击、可访问的线上站点（GitHub Pages 部署上线）。
+          互动测试模块（萌芽 / 蓄力 / 实战 三类结果）的题目是团队共同设计、选项由团队讨论执笔完成。</p>
+        </div>
+
+        <div class="work-section ai">
+          <div class="work-label">AI 如何参与</div>
+          <ul>
+            <li><code>AI指令-调研可视化模块.md</code>（50KB）</li>
+            <li><code>网页文案AI指令.md</code>（19KB）</li>
+            <li><code>直接可用的AI指令_最终版.md</code>（14KB）</li>
+            <li><code>北辰青年校园团队招募 · 整站文案 V4.docx</code>（31KB）</li>
+            <li><code>北辰青年校园团队招募网站视觉设计 Prompt.pdf</code>（583KB）</li>
+          </ul>
+          <p style="margin-top:10px;">用 AI 迭代视觉方案（Logo、配色、布局）、迭代文案版本（V1 → V4），最后我逐字修改后定稿。</p>
+        </div>
+
+        <div class="work-section">
+          <div class="work-label">最终成果</div>
+          <p>
+            🔗 <strong>真实上线链接</strong>：
+            <a href="https://saywaiy.github.io/index.html/" target="_blank" rel="noopener" style="color:var(--accent-mint-deep);font-weight:600;">https://saywaiy.github.io/index.html/</a>
+            （GitHub Pages，已部署）
+          </p>
+          <p style="margin-top:8px;">站内包含：六屏招募官网 + 「成长状态测试」（萌芽 / 蓄力 / 实战 三类结果判定）+ 调研可视化模块。</p>
+          <a href="https://saywaiy.github.io/index.html/" target="_blank" rel="noopener" class="work-cta">↗ 打开网站</a>
+        </div>
+
+        <div class="work-section judge">
+          <div class="work-label">个人判断</div>
+          <p>我愿意做有"第三方可访问"链接的作品 —— <strong>AI 让个人建站不再是高门槛</strong>。
+          我的前提：「用真实任务、真实用户痛点支撑内容」，严格规避空泛宣传。
+          我学到的：团队里有人专门设计海报与内容，我用 AI 帮我把它们<strong>整合成一个可点击、可发布、可追踪的整站</strong>——这是"工程化输出"。</p>
+        </div>
+      </article>
+
+      <!-- ====== 作品 4 ====== -->
+      <article class="work">
+        <div class="work-num">04</div>
+        <div class="work-meta">
+          <span><span class="emoji">📅</span> 第 3 周</span>
+          <span><span class="emoji">🛠</span> 求职面试 AI Skill 工作流 · 真实测试</span>
+        </div>
+        <h3 class="work-title">岗位分析与准备清单（AI 工作流实跑）</h3>
+        <p class="work-subtitle">用我搭的求职面试 AI Skill，跑到一个真实岗位上跑通完整闭环。</p>
+
+        <div class="work-section">
+          <div class="work-label">任务背景</div>
+          <p>第三周要求：搭建一套"求职面试 AI Skill/工作流"，对一个真实岗位跑通完整闭环：
+          <strong>岗位分析 → 经历匹配 → 材料优化 → 面试准备</strong>。
+          任务硬要求："我选择了一个真实、具体的岗位，而不是只讨论找工作这件事。"
+          同时还要担任学生面试官完成一次真实面试（19 分钟结构化面试，候选人凌东宇同学）。</p>
+        </div>
+
+        <div class="work-section">
+          <div class="work-label">我的角色</div>
+          <ul>
+            <li>选定真实岗位：京东科技「AI 品牌营销实习生」</li>
+            <li>把自己搭的工作流在这个岗位上实跑一次</li>
+            <li>同时担任学生面试官，完成 19 分钟结构化面试（记录人）</li>
+            <li>根据面试官实践修订工作流中的一个环节</li>
+          </ul>
+        </div>
+
+        <div class="work-section ai">
+          <div class="work-label">AI 如何参与（工作流 6 步）</div>
+          <ul>
+            <li><strong>Step 1 让 AI 解析岗位要求</strong>（要解决什么问题 / 核心能力 / 硬性条件）</li>
+            <li><strong>Step 2 让 AI 把我的真实经历对照要求逐条匹配</strong>（不编造）</li>
+            <li><strong>Step 3 让 AI 判断缺口</strong>（优势 / 风险 / 需确认问题）</li>
+            <li><strong>Step 4 让 AI 生成简历改稿建议</strong>（每条需我能说清原始依据）</li>
+            <li><strong>Step 5 让 AI 按面试轮次生成可准备的问题</strong>（带可用的真实经历索引）</li>
+            <li><strong>Step 6 让 AI 输出完整的"岗位分析与准备清单"</strong>（Word 报告，便于复盘）</li>
+          </ul>
+        </div>
+
+        <div class="work-section">
+          <div class="work-label">最终成果</div>
+          <ul>
+            <li>求职面试 <strong>SKILL.md / 工作流文档</strong>（可重复用于其他岗位）</li>
+            <li><strong>岗位分析与准备清单</strong>（6 部分完整：岗位解码 / 匹配 / 优势与缺口 / 投递价值 / 简历调整建议 / 面试问题）</li>
+            <li>真实测试记录：保留关键输入、输出与运行截图</li>
+            <li>面试官记录：19 分钟结构化面试《凌东宇 · 校园行动合伙人》</li>
+          </ul>
+        </div>
+
+        <div class="work-section judge">
+          <div class="work-label">个人判断（修订原因）</div>
+          <p>面试官视角让<strong>「候选用什么线索说明能力」和「面试官听到什么时产生信任」</strong>被合到一起看——
+          这反过来修订了我的简历口径（去掉空话，保留具体动作）。
+          <strong>AI 不能代替我做"价值判断"和"打不打算申请"——这两件事必须由我自己完成。</strong></p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块 2：AI 能力成长轨迹 ========== -->
+<section id="growth">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">MODULE 02 · AI 能力成长轨迹</span>
+      <h2>我从 AI 身上长出了什么</h2>
+      <p class="section-sub">四周实习下来，我把 AI 用在 7 类真实问题里——这些是我形成的（以及正在形成的）AI Skill，每一项都用「真实问题 → 我的做法 → 真实产出」叙述。</p>
     </div>
 
-    <a class="download-link" href="assets/吴瑶誉简历_品牌营销实习生.pdf" download data-page-node-id="MQa2ibAcfBL83jpdJNIifP">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="7zibCIjzgXnpAjH4GsnYSg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" data-page-node-id="FbEQ6JCVIWg9UDSgQ6YJNO"/></svg>
-      下载 PDF 简历
-    </a>
-  </aside>
+    <div class="timeline">
 
-  <!-- ============ Main ============ -->
-  <main data-page-node-id="byxQQ2r6oGuryT0zSlqwgW">
-
-    <!-- Hero -->
-    <header class="hero" data-page-node-id="M0o8ibp61jCTqMP0EeIiPJ">
-      <h1 data-page-node-id="XG7Bfx4bCTFWpH1fPpEpXu">吴瑶誉<span class="accent-dot" data-page-node-id="iI3QzLsrLHbEMU7vFi7VRx">.</span></h1>
-      <div class="role" data-page-node-id="fAbVj2aVtAKWCnuNBRL45B">求职意向：<b data-page-node-id="lXV3RbijUnLuqWEvrjvf2d">品牌营销实习生</b> · 华中师范大学新闻与传播硕士在读</div>
-      <p class="tagline" data-page-node-id="tLCWn4tbeptVZQVO3iwTay">有内容生产与项目执行经验的传播学学生，希望在 AI 时代做有真实用户洞察的品牌工作。</p>
-      <div class="meta" data-page-node-id="kaY5w8GSartBwrQpgs59dM">
-        <span data-page-node-id="w0celXJitEDH8OIEDkBuLZ">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="CUYNWDGBYEO3PPLrZXDiPX"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z" data-page-node-id="VIxO5DDY5d9kxGWCu2EtnD"/><circle cx="12" cy="10" r="3" data-page-node-id="u1BVeNWywx6bExveKZLs96"/></svg>
-          武汉 · 可到北京
-        </span>
-        <span data-page-node-id="lIYwIfCqMX5pYYoFgCCmi1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="FufxFrcNuAoULBcXaybQwI"><rect x="3" y="4" width="18" height="18" rx="2" data-page-node-id="vigFQFYlVLn1B39CVMPCfo"/><path d="M16 2v4M8 2v4M3 10h18" data-page-node-id="BguF1nIJminZio6tpQxDeb"/></svg>
-          每周 5 天 · 可实习 6 个月以上
-        </span>
-        <span data-page-node-id="2RfkdaxVj3PuHLucBBsuPA">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="usUUvlddgHGMgaXlm20Cmi"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" data-page-node-id="ATBk8v0AkjJZ8PV0BkCuwe"/><path d="M22 6l-10 7L2 6" data-page-node-id="Njba08n3qpXDCENDA72fqt"/></svg>
-          18607236875@163.com
-        </span>
+      <div class="skill">
+        <div class="skill-dot"></div>
+        <span class="skill-week">第 1 周</span>
+        <h4 class="skill-name">让 AI 当采访者 —— 读懂我自己</h4>
+        <div class="skill-row"><div class="k">真实问题</div><div class="v">我很难一次性说清自己是什么样的人、写自我介绍常常卡壳。</div></div>
+        <div class="skill-row"><div class="k">我的做法</div><div class="v">让 AI 像 1v1 访谈者一样提问（自动生成后续问题），我必须每一题自己回答。</div></div>
+        <div class="skill-row"><div class="k">真实产出</div><div class="v">「AI 时代个人说明书」7 模块，飞书公开文档。</div></div>
       </div>
-      <div class="cta" data-page-node-id="66lwnn12KX3mFlFodvMjBT">
-        <a class="btn btn-primary" href="assets/吴瑶誉简历_品牌营销实习生.pdf" download data-page-node-id="bHzRacyJ4ZrVzmdphFN5B1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="Fdz9HvjBA7dr5RTHqqyhaq"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" data-page-node-id="SOJtJFdnAN6gCPPdGLtVip"/></svg>
-          下载 PDF 简历
-        </a>
-        <a class="btn btn-ghost" href="mailto:18607236875@163.com" data-page-node-id="nxaiJEYEGERwDxU1r0EqhF">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="Gnpp4FMP0BvS0ebBm8dnUX"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" data-page-node-id="4hl4oPmGLfBtwRmdvxXYoq"/><path d="M22 6l-10 7L2 6" data-page-node-id="y1wGwjKPMJ4gM48ZZWZgYS"/></svg>
-          发邮件给我
-        </a>
+
+      <div class="skill">
+        <div class="skill-dot"></div>
+        <span class="skill-week">第 2 周</span>
+        <h4 class="skill-name">让 AI 当结构化整理员 —— 把几万字素材变成可采纳的洞察</h4>
+        <div class="skill-row"><div class="k">真实问题</div><div class="v">调研素材堆了几万字，怎么变成能被团队采纳的洞察。</div></div>
+        <div class="skill-row"><div class="k">我的做法</div><div class="v"><ul><li>让 AI 先归类成维度（基本信息 / 关键行为事件 / 访谈员洞察）</li><li>再让 AI 给"可能被团队采纳的版本"，所有版本由我决定哪个走</li></ul></div></div>
+        <div class="skill-row"><div class="k">真实产出</div><div class="v">第五组《大学生群体洞察报告》、整站文案 V4。</div></div>
       </div>
-    </header>
 
-    <!-- About -->
-    <section id="about" class="about" data-page-node-id="QAkBVJXUxDWN9QqJJxhMOr">
-      <div class="section-head" data-page-node-id="JybN4MZ0TSyKRs7JzGfvLF">
-        <h2 data-page-node-id="Pn9pLmUVcHbhY5GDJzCMQ0">关于</h2>
-        <span class="count" data-page-node-id="u7THIApwH6cx8Q5CHsHE1b">01 / 05</span>
+      <div class="skill">
+        <div class="skill-dot"></div>
+        <span class="skill-week">第 2 周</span>
+        <h4 class="skill-name">让 AI 当版本迭代器 —— Logo / 配色 / 布局 / 文案的多方案对比</h4>
+        <div class="skill-row"><div class="k">真实问题</div><div class="v">设计类素材改一次就改回去，但不知道"哪一版更对"。</div></div>
+        <div class="skill-row"><div class="k">我的做法</div><div class="v">让 AI 一次性给出 3-4 个方向的版本（Logo / 配色 / 文案口吻），我对每个版本打 1 行反馈。</div></div>
+        <div class="skill-row"><div class="k">真实产出</div><div class="v">Logo 反复改版定稿；整站文案从 V1 到 V4 全部归档。</div></div>
       </div>
-      <div class="reveal" data-page-node-id="fP546G5tSsUA8cHXoekD8b">
-        <p data-page-node-id="wSlovntkZunfCDnGj6Ztz5">华中师范大学新闻与传播研二在读，本科湖北第二师范学院新闻学（优秀毕业生）。过去一年在内容审核、校园活动、文旅运营和品牌项目里积累了从执行到复盘的完整链路经验，最近一份实习在北辰青年独立完成了校园招募官网的设计与上线。</p>
-        <p data-page-node-id="wwM1FBlMjp132tpwSatUS7">对 AI 时代的品牌营销有持续兴趣——既会用 ChatGPT / Codex / WorkBuddy 辅助内容生产和网站搭建，也用即梦、可灵做过 AI 图文与短视频。期待把传播学的训练和这些新工具结合，做更靠近用户、能被验证的工作。</p>
+
+      <div class="skill">
+        <div class="skill-dot"></div>
+        <span class="skill-week">第 2 周</span>
+        <h4 class="skill-name">让 AI 当全栈工程师 —— 把内容做成可访问的网站</h4>
+        <div class="skill-row"><div class="k">真实问题</div><div class="v">"我想做网站但不会写代码"。</div></div>
+        <div class="skill-row"><div class="k">我的做法</div><div class="v">用 AI 指令把整站内容、视觉设计、互动测试落到指令集，再 + GitHub Pages 部署上线。</div></div>
+        <div class="skill-row"><div class="k">真实产出</div><div class="v"><a href="https://saywaiy.github.io/index.html/" target="_blank" rel="noopener" style="color:var(--accent-mint-deep);font-weight:600;">https://saywaiy.github.io/index.html/</a>（6 屏招募官网 + 成长状态测试）</div></div>
       </div>
-    </section>
 
-    <!-- Education -->
-    <section id="education" data-page-node-id="5irC1BNG1CqJ8Q6W1EiKtz">
-      <div class="section-head" data-page-node-id="snaHfix8RCjvXlnqOajbKO">
-        <h2 data-page-node-id="8RjsjR1NHWspkTrVodEgj3">教育背景</h2>
-        <span class="count" data-page-node-id="ZVQ2XqM7TtIkrFAgTtMdOs">02 / 05</span>
+      <div class="skill">
+        <div class="skill-dot"></div>
+        <span class="skill-week">第 3 周</span>
+        <h4 class="skill-name">让 AI 跑通完整工作流 —— 求职面试 6 步闭环</h4>
+        <div class="skill-row"><div class="k">真实问题</div><div class="v">"我不能每遇到一个新岗位就从头想一遍"。</div></div>
+        <div class="skill-row"><div class="k">我的做法</div><div class="v">把"做什么"和"为什么这么做"都写成 SKILL.md；用真实测试反复迭代（岗位分析 → 匹配 → 材料 → 面试）。</div></div>
+        <div class="skill-row"><div class="k">真实产出</div><div class="v">京东岗位分析报告 + 19 分钟面试官记录，工作流 30 分钟可复用。</div></div>
       </div>
-      <div class="reveal" data-page-node-id="fovAoAo4AcuQuiHtayx1gL">
-        <div class="edu" data-page-node-id="mNTT4xAPvWwDJ8R62eFITy">
-          <div class="date" data-page-node-id="jDIGv4ljfFjJwikDGYg2ZX">2025.09 – 2027.06</div>
-          <div data-page-node-id="OyNGPj8VGSz44itDOhb2Et">
-            <div class="school" data-page-node-id="SVTlPoNpQJIGCnxAjScCYw">华中师范大学<span style="color: var(--muted); font-weight: 400; font-size: 14px; margin-left: 8px;" data-page-node-id="aKOcydUNA0p5IBOboaBWU5">硕士在读</span></div>
-            <div class="degree" data-page-node-id="YVjsRgMLPsks9upJ5rn1Iq">新闻与传播</div>
-            <ul class="notes" data-page-node-id="PhdsAWw3bdsmNZVBiM6v5l">
-              <li data-page-node-id="Ca5MLMBLAJn0Ib1eHgaUBB">主修：网络视频传播、新媒介发展前沿、<b data-page-node-id="Zg6GcRA9Gf3IfLd4aJXEq4">人工智能与新闻生产</b>、整合营销传播、品牌传播策略、消费者行为分析</li>
-            </ul>
-          </div>
-        </div>
-        <div class="edu" data-page-node-id="6w2GmEzo7MwomZ5MTpCc4E">
-          <div class="date" data-page-node-id="EBgV1BqDdxOOOI193foU2Y">2021.09 – 2025.06</div>
-          <div data-page-node-id="rsFv3JQ4WTbFBOFsKwN9wz">
-            <div class="school" data-page-node-id="6voj3oB6zXa8eiEFPwAEyZ">湖北第二师范学院<span class="tag" data-page-node-id="1JPc59wWcZQjcjwjWDZtSp">优秀毕业生</span></div>
-            <div class="degree" data-page-node-id="vYu9Sn3KuNaj9hQQsekpoz">新闻学 · 学士</div>
-            <ul class="notes" data-page-node-id="zzdSWkV82EDEjuxC0GLkrN">
-              <li data-page-node-id="Z9iF8GPdPfnbAGS9TEJ3T7">第十六届大广赛湖北赛区省级优秀奖、校级乙等奖学金、优秀共青团员</li>
-            </ul>
-          </div>
-        </div>
+
+      <div class="skill forming">
+        <div class="skill-dot"></div>
+        <span class="skill-week">正在形成 · 1</span>
+        <h4 class="skill-name">让 AI 当个人教练 —— 通过 6 问结构化模板持续迭代</h4>
+        <div class="skill-row"><div class="k">真实问题</div><div class="v">我的成长路径分散在不同实习 / 项目里，怎么把它们串成一条线。</div></div>
+        <div class="skill-row"><div class="k">我的做法</div><div class="v">用 6 问结构化模板（身份定位 / 任务系统 / 沟通 / 反馈 / 压力预警 / 支持系统）逐步收集信息，让 AI 当教练，沉淀为个人说明书 / 个人名片。</div></div>
+        <div class="skill-row"><div class="k">真实产出</div><div class="v">《AI 时代个人说明书》、私人 AI 工作台搭建中。</div></div>
       </div>
-    </section>
 
-    <!-- Experience -->
-    <section id="experience" data-page-node-id="E5ywsMYU1KRwO9gCIpFGso">
-      <div class="section-head" data-page-node-id="gxiw2fmmDze8TJ0FgVMuAM">
-        <h2 data-page-node-id="6FpopBHSnb9tIGUHxFiAEs">实习经历</h2>
-        <span class="count" data-page-node-id="NsWVRpGTCxRtDYqPGdsDKW">03 / 05</span>
+      <div class="skill forming">
+        <div class="skill-dot"></div>
+        <span class="skill-week">正在形成 · 2</span>
+        <h4 class="skill-name">让 AI 当作业跑腿 —— 用命令行把重复工序自动化</h4>
+        <div class="skill-row"><div class="k">真实问题</div><div class="v">每做一份作品，markdown → HTML → PDF → 飞书，我都需要一份一份手工搬运。</div></div>
+        <div class="skill-row"><div class="k">我的做法</div><div class="v">把 lark-cli / WPS CLI / pymupdf 等命令行工具串成一条交付流水线。</div></div>
+        <div class="skill-row"><div class="k">真实产出</div><div class="v">已用：把北辰青年实习总结 markdown 一键转飞书文档。本作品集也是这套流水线产出的。</div></div>
       </div>
-      <div class="reveal" data-page-node-id="rvd8Vmb2iF3u8RhRnKd7t2">
-        <div class="exp" data-page-node-id="7rQFjJCZTXB8J3BWWbGEOB">
-          <div class="exp-head" data-page-node-id="2CT34aeBrcOl1s0oZEHyMC">
-            <div data-page-node-id="Uftbs3en2pYdeWATK3I5WY">
-              <div class="title" data-page-node-id="wxqTVnmK9zCu2ChoDpDFmS">项目实习生</div>
-              <div class="org" data-page-node-id="8lF8J0ScAwV4TIF8MFm3JP">北辰青年 · 校园行动合伙人项目组</div>
-            </div>
-            <div class="period" data-page-node-id="M0fP2ddEGsXGvDp99rouY8">2026.08 – 2026.09</div>
-          </div>
-          <ul data-page-node-id="Auolh6rm7kFPwkYB1ZeV9q">
-            <li data-page-node-id="3EwQJqUfkBUOirDWJKYcIs"><b data-page-node-id="ghbJRSnHId9dEXFFl16I3u">独立完成「北辰青年校园招募官网」全站整合与 GitHub Pages 部署上线</b>，整合团队内容与海报素材、独立完成页面视觉设计（含 Logo 反复设计改版）、交互开发与整体运行，把线下项目推到可访问的线上站点；</li>
-            <li data-page-node-id="PPjkm8i7kmEkz1l9aP6ylM">参与「成长状态互动测试」模块设计（题库团队共同设计、选项团队讨论执笔），支撑招募官网的调研数据可视化呈现；</li>
-            <li data-page-node-id="4H2HbSSyAUDKpSHpPDfTkk">团队共同分发回收 <span class="highlight-num" data-page-node-id="ya4bgD4ehVfqOxlzeC3AJf">264 份</span>问卷；按年龄分层独立完成所属群体深度访谈（含 <span class="highlight-num" data-page-node-id="w3TWZN7UtxuAhCOnVuskAp">1 小时</span>结构化访谈），提炼用户洞察；</li>
-            <li data-page-node-id="YZqSX7hs9uKGuxwtKpcr4G">全程使用 ChatGPT / DeepSeek 辅助内容设计与文案打磨；第三周担任面试官完成 <span class="highlight-num" data-page-node-id="jxmT2fWFnTgRfMOhXfy4Ai">19 分钟</span>线上结构化面试（跨部门协作 / 履约一致性 / 自我认知维度）。</li>
-          </ul>
-        </div>
 
-        <div class="exp" data-page-node-id="8uxWNatv1CdFXigXCd6auv">
-          <div class="exp-head" data-page-node-id="Vm4gliGrF3t6D02KOPAtpE">
-            <div data-page-node-id="7HLuMiWhHHteWt6AenyrIB">
-              <div class="title" data-page-node-id="h68XzfXFNpGEnVHygnub0J">AI 内容标注实习生</div>
-              <div class="org" data-page-node-id="ZYsZJDezEmrdA6V2Qbv0lM">科大讯飞股份有限公司</div>
-            </div>
-            <div class="period" data-page-node-id="yipkZaAung5Gm8OoTQqFGl">2025.04 – 2025.06</div>
-          </div>
-          <ul data-page-node-id="sOcFJipNZ05GohnAfB3ntC">
-            <li data-page-node-id="YAmnvo96HsfoIlRmHTTKn5">负责 AI 训练文本、语音素材的情感分类与合规校验，累计完成 <span class="highlight-num" data-page-node-id="rZ2FSx2g1Y2hecvReW4D0g">1.4 万余条</span>内容审核，标注准确率稳定 <span class="highlight-num" data-page-node-id="F0kjAJRxPJd0NzGBsWECUC">98.5%</span>；</li>
-            <li data-page-node-id="HfkJXG4nCnVy1JBB8PNo5h">归纳高频错误样本，输出统一标注校验细则，降低团队二次复核工作量 <span class="highlight-num" data-page-node-id="ZE15bT1b27QOKJytZnsq4D">15%</span>，严格遵守信息保密制度。</li>
-          </ul>
-        </div>
+    </div>
+  </div>
+</section>
 
-        <div class="exp" data-page-node-id="Fk9TF1Ivc3fFDX36g8okG1">
-          <div class="exp-head" data-page-node-id="NgZBf62OeOGlPXCynpT3RN">
-            <div data-page-node-id="WANNNcSUHobXNCslwVgmES">
-              <div class="title" data-page-node-id="4np160qc1BEWDcXRFkxa3x">宣传运营实习生</div>
-              <div class="org" data-page-node-id="W7HAVs91yzaq1jIyY8uxjS">鄂州市杏福园旅游区</div>
-            </div>
-            <div class="period" data-page-node-id="4KidWCzHiforQTova3FRjx">2023.09 – 2023.11</div>
-          </div>
-          <ul data-page-node-id="0CsBcloBYFemcjEWZDq3A4">
-            <li data-page-node-id="l12gzzIGvodETOPVYedT6w"><b data-page-node-id="CHRdrgeOC2XV8lSurf5k28">短视频创作：</b>团队协作中负责内容板块，独立完成 <span class="highlight-num" data-page-node-id="0vW92QVDxdoCnZ3SaGnqLW">20 余条</span>文旅宣传短视频的「选题策划 → 实景拍摄 → 剪辑 → 平台发布」全流程；</li>
-            <li data-page-node-id="EuBhKffFq6FD8vGxPt2zUD"><b data-page-node-id="uPaumYSYVMpjPKEtVrUaoQ">双平台运营：</b>参与抖音、小红书双品牌账号运营，账号内容总播放量突破 <span class="highlight-num" data-page-node-id="UgSyvQaLHIZ90FsjwlEKlB">8w+</span>，企业线上品牌曝光提升 20%，国庆期间成功转化近 <span class="highlight-num" data-page-node-id="EW33hdx6GIsc0vVQNFs0Xe">1w</span>线下客流。</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<!-- ========== 底部 ========== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <p><span class="emoji">🌿</span> 谢谢阅读到这里</p>
+    <p>这是 2026 年 9 月我的一份作品集 · 吴瑶誉（饭饭）</p>
+    <p style="margin-top:12px;font-size:.8rem;color:var(--ink-light);">版面保留事实、不编造、不夸大。所有数据与日期均可追溯到我参与过的真实工作记录。</p>
+  </div>
+</footer>
 
-    <!-- Projects -->
-    <section id="projects" data-page-node-id="cbUdtEVDdv1Bz5FyAeCWFu">
-      <div class="section-head" data-page-node-id="imfiCCnV9VrIYBU4eyLa61">
-        <h2 data-page-node-id="f956w8OXF0luPsR6giEcYb">项目 / 实践</h2>
-        <span class="count" data-page-node-id="1FUpoWRCQpKYwUkB4VguKU">04 / 05</span>
-      </div>
-      <div class="reveal" data-page-node-id="TJrEqcSWar6jTFVQ5EnEPf">
-        <div class="exp" data-page-node-id="1fSvPAQog2zr9Vyhd0olQN">
-          <div class="exp-head" data-page-node-id="9mW8GrzHtBoUcRH3iLHkoE">
-            <div class="title" data-page-node-id="CuziTgASGt30l7nduVfa1E">校园品牌活动统筹（跨校协作）</div>
-          </div>
-          <ul data-page-node-id="utJPNZZBUqXqutAre6PDZ9">
-            <li data-page-node-id="8GPvEBg41e2C497pOiK7dn"><b data-page-node-id="GsppSumuOYzLq26ElcHmAX">「书香长江」青春读书会（2025.09）：</b>参与 15 校系列活动，负责跨校协作统筹，制作系列短视频、推文，获湖北教育频道、湖北日报等媒体转载；</li>
-            <li data-page-node-id="k8XLhU0b6TZuPvDwGaK35K"><b data-page-node-id="ds6bBkQgeyVSEemwxKBL1b">「大手拉小手」主题活动（2025.12）：</b>联合新华书店集团及 5 所院校，策划执行 <span class="highlight-num" data-page-node-id="BKbWVlEPQB8TYFztS76udY">300 余人</span>线下活动，负责宣传策划、现场拍摄及新闻撰稿，稿件获荆楚网、长江云、学习强国、湖北日报等多家媒体报道。</li>
-          </ul>
-        </div>
-
-        <div class="exp" data-page-node-id="m1pE5TqIwCwZ9tzSwIBx3W">
-          <div class="exp-head" data-page-node-id="cCsYp0HZGCl3p8Wq9UjonI">
-            <div class="title" data-page-node-id="F7mZlz1d0sBVsoOB9SYaZ4">品牌传播与公关内容</div>
-          </div>
-          <ul data-page-node-id="V1Yd47neYIFqamB3Zod1PO">
-            <li data-page-node-id="bdmCeAXvNmt69fTieiNCZV"><b data-page-node-id="HHM5JxJM5c5d7eg3VqGyyu">黄麻起义纪念园青春回访（2025.11）：</b>与中国青年网合作拍摄《红色精神薪火传：黄麻起义纪念园迎来青春回响》宣传视频，<span class="highlight-num" data-page-node-id="INmNX6MC0k6R0R3urRqzl6">全网阅读量超 30W</span>；</li>
-            <li data-page-node-id="AID0Hl7LDE4p1KhLdLJPEw"><b data-page-node-id="KVqoBJCFaXMnkmHDQPlMEu">长江书市 · 武汉童书展（2026.04）：</b>首义广场站活动以「红色研学 + 情景演绎」创新形式推动红色文化传播，负责全程拍摄记录与通讯稿撰写。</li>
-          </ul>
-        </div>
-
-        <div class="exp" data-page-node-id="btBV3u2l4D78DWEQ6Y3Mq2">
-          <div class="exp-head" data-page-node-id="aZ3eLCAqHeWJd3vbXlMO7h">
-            <div class="title" data-page-node-id="XZQaHROk1UiiWTChkH4FpJ">用户洞察与体验创新</div>
-          </div>
-          <ul data-page-node-id="0PoaVblppzGRIHC2tWsqU4">
-            <li data-page-node-id="hhajYlHZTMRAlgCiNHMtfV">跨文化交流项目中，策划并推动落地微信互动小程序，搭建中外青少年结对探索任务系统，服务参与人数 <span class="highlight-num" data-page-node-id="AfrjZcVB6qcHKDZhkBXp3Q">100+</span>人，用户好评率 <span class="highlight-num" data-page-node-id="NiKQLandjYUKrSOrUW49R5">95%+</span>。</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" data-page-node-id="7rqWZk1kgYh5U4JSgLxvPb">
-      <div class="section-head" data-page-node-id="NpbO5DEwCeZ6r4nkdGMwCz">
-        <h2 data-page-node-id="S7HNWnD9ZzDzGn7aSL2MCu">技能 & 工具</h2>
-        <span class="count" data-page-node-id="xeIyfD3E8y3MidiayL4RRA">05 / 05</span>
-      </div>
-      <div class="skills reveal" data-page-node-id="7bsfpobwszGC8lcbAkhFil">
-        <div class="skill-group" data-page-node-id="Ny783CW2IfMYUH0LMlalhg">
-          <div class="label" data-page-node-id="DCwiTwGfojvo2Y8QXXVeNW">平台能力</div>
-          <p data-page-node-id="D4P5PYnQ8PGrbjyZUehayF">深度熟悉抖音、小红书平台内容生态与流量机制，有实操运营及数据复盘经验。</p>
-        </div>
-        <div class="skill-group" data-page-node-id="ji74Uo0gtgjhACFm1E8Sjc">
-          <div class="label" data-page-node-id="wN1Om1MoSLnVhDo3cgjw6P">内容制作</div>
-          <p data-page-node-id="6jMqA8ivBJHOAy0jbKITKA">熟练使用 Premiere Pro、剪映完成短视频剪辑；具备公众号排版、海报文案能力；Word / PPT / Excel 完成宣传方案与传播数据复盘。</p>
-        </div>
-        <div class="skill-group" data-page-node-id="zciF6nDSeRLL1HezyHq0N3">
-          <div class="label" data-page-node-id="8n7K7ihf9a6aTPBjNIY7oC">AI 工具</div>
-          <p data-page-node-id="PAAFEor4UBs4GgiHHznla6">用 ChatGPT / Codex / WorkBuddy 辅助内容策划与文案生成，可完成网页搭建（GitHub Pages 部署经验）；用即梦、可灵做 AI 图文与短视频。</p>
-          <div class="tags" data-page-node-id="blB9zMuwsA9P7eeghDt0iP">
-            <span data-page-node-id="iJ1QZkngIQO7mvTtVm1qcM">ChatGPT</span><span data-page-node-id="TjV1jqGaVFdUBW1vYbuotH">Codex</span><span data-page-node-id="5QN6iBvHyoGNwB0V3aZh9o">WorkBuddy</span><span data-page-node-id="n3OqhaCFxAegN7Mc5Fo0FR">DeepSeek</span><span data-page-node-id="eimVHZqk3G2gYOAO7zMs9F">豆包</span><span data-page-node-id="S8OCugzYTjCLCAlRPruZLQ">即梦</span><span data-page-node-id="KMIYmnxTVwtt9A4cNHHPDb">可灵</span>
-          </div>
-        </div>
-        <div class="skill-group" data-page-node-id="EOjN56F4cNICNmeabNTO75">
-          <div class="label" data-page-node-id="0ClAodkwsEBGVf6nQD3ywS">证书</div>
-          <p data-page-node-id="UCVgPEfXL0Z2XCGIqUP0mU">大学英语四六级、普通话二级甲等、Office 计算机二级、教师资格证书。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <footer id="contact" class="contact-foot" data-page-node-id="mtU0DqfEakkPOVx1auFCtq">
-      <div data-page-node-id="l78h2e3peYA1g6Bbb3J4dg">© <span id="year" data-page-node-id="58xWdlECapg2z8zES73wZ1"></span> 吴瑶誉 · 持续更新</div>
-      <div class="links" data-page-node-id="bWS1kpUuSpdMYMqnVEJQip">
-        <a href="mailto:18607236875@163.com" data-page-node-id="BiPO8A58ePIvetoRGpbLeS">邮箱</a>
-        <a href="tel:18607236875" data-page-node-id="H83hCjHK62z4n6qbCUL2Hv">电话</a>
-        <a href="assets/吴瑶誉简历_品牌营销实习生.pdf" download data-page-node-id="4bP6nFCsUJJVuB5VFIXwEZ">PDF 简历</a>
-      </div>
-    </footer>
-
-  </main>
-</div>
-
-<script>
-  // 年份
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // 明暗模式
-  const htmlEl = document.documentElement;
-  const themeBtn = document.getElementById('themeBtn');
-  const iconSun = document.getElementById('iconSun');
-  const STORAGE_KEY = 'fanfan-theme';
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored) htmlEl.setAttribute('data-theme', stored);
-  function syncIcon() {
-    const dark = htmlEl.getAttribute('data-theme') === 'dark';
-    iconSun.innerHTML = dark
-      ? '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>'
-      : '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>';
-  }
-  syncIcon();
-  themeBtn.addEventListener('click', () => {
-    const next = htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    htmlEl.setAttribute('data-theme', next);
-    localStorage.setItem(STORAGE_KEY, next);
-    syncIcon();
-  });
-
-  // 滚动：当前章节高亮
-  const navLinks = document.querySelectorAll('.sidenav nav a');
-  const sections = ['about', 'education', 'experience', 'projects', 'skills']
-    .map(id => document.getElementById(id))
-    .filter(Boolean);
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const id = e.target.id;
-        navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + id));
-      }
-    });
-  }, { rootMargin: '-30% 0px -55% 0px', threshold: 0 });
-  sections.forEach(s => io.observe(s));
-
-  // 滚动入场动画
-  const reveals = document.querySelectorAll('.reveal');
-  const ro = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('is-visible');
-        ro.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => ro.observe(el));
-
-  // 移动端菜单
-  const sidenav = document.getElementById('sidenav');
-  const menuBtn = document.getElementById('menuBtn');
-  menuBtn.addEventListener('click', () => sidenav.classList.toggle('is-open'));
-  sidenav.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => sidenav.classList.remove('is-open')));
-</script>
 </body>
 </html>
