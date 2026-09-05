@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-page-node-id="ROkqJqzCPi8vHVuDcFBXnF">
+<head data-page-node-id="8BYzBfkwbCa1VDpeXrfYe4">
+<meta charset="UTF-8" data-page-node-id="eRVCm2k4ubJj1AHhEs1LBx" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="3DxUT2N7rF5MHQXfz0G735" />
+<meta name="description" content="吴瑶誉 · 品牌营销实习生 · 华中师范大学新闻与传播硕士在读" data-page-node-id="rhWCalhua8ANFBz8mZMrqm" />
+<meta name="theme-color" content="#1f4e5f" data-page-node-id="NAmsqpVIYS3TsSuhLDqmCf" />
+<title>吴瑶誉 · 品牌营销实习生</title>
+<style>
+  /* ============ Design Tokens ============ */
+  :root {
+    --bg: #fafaf6;
+    --surface: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --muted: #8a8a8a;
+    --line: #ececec;
+    --line-strong: #d6d6d0;
+    --accent: #1f4e5f;
+    --accent-soft: #e9f0f3;
+    --highlight: #d97757;
+    --highlight-soft: #fbeee6;
+    --radius: 4px;
+    --max-w: 1080px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.04);
+    --t: 0.25s ease;
+  }
+  [data-theme="dark"] {
+    --bg: #14181c;
+    --surface: #1c2227;
+    --ink: #f0f0ec;
+    --ink-soft: #c2c2bd;
+    --muted: #8a8e93;
+    --line: #2a3137;
+    --line-strong: #3a4147;
+    --accent: #7eb6c4;
+    --accent-soft: #1f2c30;
+    --highlight: #e8a585;
+    --highlight-soft: #2c231d;
+    --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+
+  /* ============ Reset & Base ============ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Inter", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 16px;
+    transition: background var(--t), color var(--t);
+  }
+  a { color: inherit; text-decoration: none; transition: color var(--t); }
+  a:hover { color: var(--accent); }
+  ::selection { background: var(--accent); color: #fff; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; cursor: pointer; }
+
+  /* ============ Layout ============ */
+  .layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 64px 40px 96px;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* ============ Side Nav ============ */
+  .sidenav {
+    position: sticky;
+    top: 64px;
+    font-size: 14px;
+  }
+  .sidenav .brand { font-size: 18px; font-weight: 700; letter-spacing: 0.5px; }
+  .sidenav .brand small { display: block; font-size: 12px; color: var(--muted); font-weight: 400; margin-top: 4px; letter-spacing: 1px; }
+  .sidenav nav { margin-top: 36px; }
+  .sidenav nav a {
+    display: block;
+    padding: 6px 0 6px 14px;
+    color: var(--ink-soft);
+    border-left: 2px solid var(--line);
+    transition: border-color var(--t), color var(--t);
+  }
+  .sidenav nav a:hover,
+  .sidenav nav a.is-active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+  .sidenav .tools { margin-top: 32px; display: flex; gap: 8px; align-items: center; }
+  .sidenav .tools button {
+    width: 32px; height: 32px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--ink-soft);
+    display: grid; place-items: center;
+    transition: border-color var(--t), color var(--t);
+  }
+  .sidenav .tools button:hover { border-color: var(--accent); color: var(--accent); }
+  .sidenav .tools svg { width: 16px; height: 16px; }
+  .sidenav .download-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 20px;
+    padding: 8px 14px;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    transition: background var(--t), color var(--t);
+  }
+  .sidenav .download-link:hover { background: var(--ink); color: var(--bg); }
+  .sidenav .download-link svg { width: 14px; height: 14px; }
+
+  /* ============ Hero ============ */
+  .hero { padding-bottom: 16px; }
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.15;
+  }
+  .hero h1 .accent-dot { color: var(--highlight); }
+  .hero .role {
+    margin-top: 14px;
+    font-size: 18px;
+    color: var(--ink-soft);
+  }
+  .hero .role b { color: var(--accent); font-weight: 600; }
+  .hero .tagline {
+    margin-top: 28px;
+    font-size: 16px;
+    color: var(--ink-soft);
+    max-width: 560px;
+  }
+  .hero .meta {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 28px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .hero .meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .hero .meta svg { width: 14px; height: 14px; }
+  .hero .cta { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform var(--t), background var(--t), color var(--t), border-color var(--t);
+  }
+  .btn-primary { background: var(--ink); color: var(--bg); }
+  .btn-primary:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
+  .btn-ghost { border: 1px solid var(--line-strong); color: var(--ink); }
+  .btn-ghost:hover { border-color: var(--ink); transform: translateY(-1px); }
+  .btn svg { width: 16px; height: 16px; }
+
+  /* ============ Sections ============ */
+  section { margin-top: 72px; scroll-margin-top: 32px; }
+  section:first-of-type { margin-top: 0; }
+  section .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; }
+  section h2 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  section .section-head .count {
+    font-size: 12px;
+    color: var(--muted);
+    font-feature-settings: "tnum";
+  }
+
+  /* ============ About ============ */
+  .about p { color: var(--ink-soft); max-width: 620px; }
+  .about p + p { margin-top: 16px; }
+
+  /* ============ Education ============ */
+  .edu {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 24px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+  }
+  .edu:last-child { border-bottom: 1px solid var(--line); }
+  .edu .date { font-size: 13px; color: var(--muted); font-feature-settings: "tnum"; padding-top: 2px; }
+  .edu .school { font-size: 17px; font-weight: 600; }
+  .edu .degree { color: var(--ink-soft); font-size: 14px; margin-top: 4px; }
+  .edu .tag {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 11px;
+    padding: 2px 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 999px;
+    letter-spacing: 0.5px;
+  }
+  .edu .notes { margin-top: 12px; font-size: 14px; color: var(--ink-soft); }
+  .edu .notes li { padding-left: 18px; position: relative; margin-bottom: 4px; }
+  .edu .notes li::before { content: "—"; position: absolute; left: 0; color: var(--muted); }
+  .edu ul { list-style: none; }
+
+  /* ============ Experience ============ */
+  .exp {
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+  }
+  .exp:last-child { border-bottom: 1px solid var(--line); }
+  .exp-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; }
+  .exp-head .title { font-size: 17px; font-weight: 600; }
+  .exp-head .org { display: block; font-size: 13px; color: var(--muted); font-weight: 400; margin-top: 2px; }
+  .exp-head .period { font-size: 13px; color: var(--muted); font-feature-settings: "tnum"; }
+  .exp ul { margin-top: 14px; list-style: none; }
+  .exp li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.75;
+  }
+  .exp li::before { content: ""; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .exp li b { color: var(--ink); font-weight: 600; }
+  .exp .highlight-num { color: var(--highlight); font-weight: 600; font-feature-settings: "tnum"; }
+
+  /* ============ Skills ============ */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 40px;
+  }
+  .skill-group .label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .skill-group p { font-size: 14.5px; color: var(--ink-soft); }
+  .skill-group .tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-group .tags span {
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    color: var(--ink-soft);
+  }
+
+  /* ============ Contact Footer ============ */
+  .contact-foot {
+    margin-top: 96px;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .contact-foot .links { display: flex; gap: 20px; }
+  .contact-foot .links a:hover { color: var(--accent); }
+
+  /* ============ Reveal Animation ============ */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.is-visible { opacity: 1; transform: none; }
+
+  /* ============ Mobile Menu Toggle (hidden on desktop) ============ */
+  .menu-btn { display: none; }
+
+  /* ============ Responsive ============ */
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; padding: 24px 22px 80px; gap: 24px; }
+    .sidenav {
+      position: sticky; top: 0;
+      background: var(--bg);
+      padding: 14px 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      margin: -24px -22px 0;
+      padding: 14px 22px;
+    }
+    .sidenav .brand { display: flex; justify-content: space-between; align-items: center; }
+    .sidenav .menu-btn {
+      display: grid;
+      width: 36px; height: 36px;
+      place-items: center;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--ink);
+    }
+    .sidenav .menu-btn svg { width: 18px; height: 18px; }
+    .sidenav nav,
+    .sidenav .tools,
+    .sidenav .download-link {
+      display: none;
+    }
+    .sidenav.is-open nav,
+    .sidenav.is-open .download-link { display: block; }
+    .sidenav.is-open .tools { display: flex; }
+    .sidenav.is-open nav { margin-top: 20px; }
+    .hero h1 { font-size: 40px; }
+    .hero .role { font-size: 16px; }
+    .skills { grid-template-columns: 1fr; gap: 24px; }
+    .edu { grid-template-columns: 1fr; gap: 8px; }
+    .edu .date { padding-top: 0; }
+  }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 34px; }
+    .layout { padding: 20px 18px 64px; }
+  }
+</style>
+</head>
+<body data-page-node-id="ZEZvw4pUHH6St1jEMYubkZ">
+<div class="layout" data-page-node-id="eD2ob5ucjf0C0vwZ52069c">
+
+  <!-- ============ Side Nav ============ -->
+  <aside class="sidenav" id="sidenav" data-page-node-id="sqVvPjuE93KRtfQtcy8NUA">
+    <div class="brand" data-page-node-id="GuUJFuRLN66ixVZQfRLGwA">
+      <div data-page-node-id="CAF3G44hfFsE0gJOTHiJqE">
+        吴瑶誉<span style="color: var(--highlight)" data-page-node-id="YpURLNOcW4A1acbKcs39Ne">.</span>
+        <small data-page-node-id="xxJ2mdfmfxFKAVUTth29EB">FANFAN · PORTFOLIO</small>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="切换导航" data-page-node-id="t83VUVjFHhYE2gptwKRDis">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="mmI0LnU7QJlPeNwo2WTaP0"><path d="M3 6h18M3 12h18M3 18h18" data-page-node-id="Ahxy5ZpJtvrFcXgVS7PQmh"/></svg>
+      </button>
+    </div>
+
+    <nav aria-label="主导航" data-page-node-id="XFsRCnGKZu4QSJhh9DxTy2">
+      <a href="#about" data-page-node-id="WtJdvYGZTQpqbZpdy7DgH4">关于</a>
+      <a href="#education" data-page-node-id="coudBIKM3tMD5pSwll5iAO">教育</a>
+      <a href="#experience" data-page-node-id="q8chqSHgxG2XkVmsMwds3o">实习</a>
+      <a href="#projects" data-page-node-id="NjUNI8irHcEwRLxHwdckd5">项目</a>
+      <a href="#skills" data-page-node-id="rpCFlGCEdE234HeUcZu1AG">技能</a>
+      <a href="#contact" data-page-node-id="mxIGDGr9lBUgflFrQAV1OY">联系</a>
+    </nav>
+
+    <div class="tools" role="group" aria-label="工具栏" data-page-node-id="iA0Cqb3bahREFhJsSEaej8">
+      <button id="themeBtn" aria-label="切换明暗主题" data-page-node-id="GWvK52dJeUACAvTOaER1F2">
+        <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="Pn7IeP2nEe6zUBVOM1wg0a"><circle cx="12" cy="12" r="4" data-page-node-id="swvnF39lC8rsOOPkFs1pDN"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" data-page-node-id="WeDj1uTISC8CzDcBAphTVM"/></svg>
+      </button>
+    </div>
+
+    <a class="download-link" href="assets/吴瑶誉简历_品牌营销实习生.pdf" download data-page-node-id="MQa2ibAcfBL83jpdJNIifP">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="7zibCIjzgXnpAjH4GsnYSg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" data-page-node-id="FbEQ6JCVIWg9UDSgQ6YJNO"/></svg>
+      下载 PDF 简历
+    </a>
+  </aside>
+
+  <!-- ============ Main ============ -->
+  <main data-page-node-id="byxQQ2r6oGuryT0zSlqwgW">
+
+    <!-- Hero -->
+    <header class="hero" data-page-node-id="M0o8ibp61jCTqMP0EeIiPJ">
+      <h1 data-page-node-id="XG7Bfx4bCTFWpH1fPpEpXu">吴瑶誉<span class="accent-dot" data-page-node-id="iI3QzLsrLHbEMU7vFi7VRx">.</span></h1>
+      <div class="role" data-page-node-id="fAbVj2aVtAKWCnuNBRL45B">求职意向：<b data-page-node-id="lXV3RbijUnLuqWEvrjvf2d">品牌营销实习生</b> · 华中师范大学新闻与传播硕士在读</div>
+      <p class="tagline" data-page-node-id="tLCWn4tbeptVZQVO3iwTay">有内容生产与项目执行经验的传播学学生，希望在 AI 时代做有真实用户洞察的品牌工作。</p>
+      <div class="meta" data-page-node-id="kaY5w8GSartBwrQpgs59dM">
+        <span data-page-node-id="w0celXJitEDH8OIEDkBuLZ">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="CUYNWDGBYEO3PPLrZXDiPX"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z" data-page-node-id="VIxO5DDY5d9kxGWCu2EtnD"/><circle cx="12" cy="10" r="3" data-page-node-id="u1BVeNWywx6bExveKZLs96"/></svg>
+          武汉 · 可到北京
+        </span>
+        <span data-page-node-id="lIYwIfCqMX5pYYoFgCCmi1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="FufxFrcNuAoULBcXaybQwI"><rect x="3" y="4" width="18" height="18" rx="2" data-page-node-id="vigFQFYlVLn1B39CVMPCfo"/><path d="M16 2v4M8 2v4M3 10h18" data-page-node-id="BguF1nIJminZio6tpQxDeb"/></svg>
+          每周 5 天 · 可实习 6 个月以上
+        </span>
+        <span data-page-node-id="2RfkdaxVj3PuHLucBBsuPA">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="usUUvlddgHGMgaXlm20Cmi"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" data-page-node-id="ATBk8v0AkjJZ8PV0BkCuwe"/><path d="M22 6l-10 7L2 6" data-page-node-id="Njba08n3qpXDCENDA72fqt"/></svg>
+          18607236875@163.com
+        </span>
+      </div>
+      <div class="cta" data-page-node-id="66lwnn12KX3mFlFodvMjBT">
+        <a class="btn btn-primary" href="assets/吴瑶誉简历_品牌营销实习生.pdf" download data-page-node-id="bHzRacyJ4ZrVzmdphFN5B1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="Fdz9HvjBA7dr5RTHqqyhaq"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" data-page-node-id="SOJtJFdnAN6gCPPdGLtVip"/></svg>
+          下载 PDF 简历
+        </a>
+        <a class="btn btn-ghost" href="mailto:18607236875@163.com" data-page-node-id="nxaiJEYEGERwDxU1r0EqhF">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="Gnpp4FMP0BvS0ebBm8dnUX"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" data-page-node-id="4hl4oPmGLfBtwRmdvxXYoq"/><path d="M22 6l-10 7L2 6" data-page-node-id="y1wGwjKPMJ4gM48ZZWZgYS"/></svg>
+          发邮件给我
+        </a>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about" data-page-node-id="QAkBVJXUxDWN9QqJJxhMOr">
+      <div class="section-head" data-page-node-id="JybN4MZ0TSyKRs7JzGfvLF">
+        <h2 data-page-node-id="Pn9pLmUVcHbhY5GDJzCMQ0">关于</h2>
+        <span class="count" data-page-node-id="u7THIApwH6cx8Q5CHsHE1b">01 / 05</span>
+      </div>
+      <div class="reveal" data-page-node-id="fP546G5tSsUA8cHXoekD8b">
+        <p data-page-node-id="wSlovntkZunfCDnGj6Ztz5">华中师范大学新闻与传播研二在读，本科湖北第二师范学院新闻学（优秀毕业生）。过去一年在内容审核、校园活动、文旅运营和品牌项目里积累了从执行到复盘的完整链路经验，最近一份实习在北辰青年独立完成了校园招募官网的设计与上线。</p>
+        <p data-page-node-id="wwM1FBlMjp132tpwSatUS7">对 AI 时代的品牌营销有持续兴趣——既会用 ChatGPT / Codex / WorkBuddy 辅助内容生产和网站搭建，也用即梦、可灵做过 AI 图文与短视频。期待把传播学的训练和这些新工具结合，做更靠近用户、能被验证的工作。</p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" data-page-node-id="5irC1BNG1CqJ8Q6W1EiKtz">
+      <div class="section-head" data-page-node-id="snaHfix8RCjvXlnqOajbKO">
+        <h2 data-page-node-id="8RjsjR1NHWspkTrVodEgj3">教育背景</h2>
+        <span class="count" data-page-node-id="ZVQ2XqM7TtIkrFAgTtMdOs">02 / 05</span>
+      </div>
+      <div class="reveal" data-page-node-id="fovAoAo4AcuQuiHtayx1gL">
+        <div class="edu" data-page-node-id="mNTT4xAPvWwDJ8R62eFITy">
+          <div class="date" data-page-node-id="jDIGv4ljfFjJwikDGYg2ZX">2025.09 – 2027.06</div>
+          <div data-page-node-id="OyNGPj8VGSz44itDOhb2Et">
+            <div class="school" data-page-node-id="SVTlPoNpQJIGCnxAjScCYw">华中师范大学<span style="color: var(--muted); font-weight: 400; font-size: 14px; margin-left: 8px;" data-page-node-id="aKOcydUNA0p5IBOboaBWU5">硕士在读</span></div>
+            <div class="degree" data-page-node-id="YVjsRgMLPsks9upJ5rn1Iq">新闻与传播</div>
+            <ul class="notes" data-page-node-id="PhdsAWw3bdsmNZVBiM6v5l">
+              <li data-page-node-id="Ca5MLMBLAJn0Ib1eHgaUBB">主修：网络视频传播、新媒介发展前沿、<b data-page-node-id="Zg6GcRA9Gf3IfLd4aJXEq4">人工智能与新闻生产</b>、整合营销传播、品牌传播策略、消费者行为分析</li>
+            </ul>
+          </div>
+        </div>
+        <div class="edu" data-page-node-id="6w2GmEzo7MwomZ5MTpCc4E">
+          <div class="date" data-page-node-id="EBgV1BqDdxOOOI193foU2Y">2021.09 – 2025.06</div>
+          <div data-page-node-id="rsFv3JQ4WTbFBOFsKwN9wz">
+            <div class="school" data-page-node-id="6voj3oB6zXa8eiEFPwAEyZ">湖北第二师范学院<span class="tag" data-page-node-id="1JPc59wWcZQjcjwjWDZtSp">优秀毕业生</span></div>
+            <div class="degree" data-page-node-id="vYu9Sn3KuNaj9hQQsekpoz">新闻学 · 学士</div>
+            <ul class="notes" data-page-node-id="zzdSWkV82EDEjuxC0GLkrN">
+              <li data-page-node-id="Z9iF8GPdPfnbAGS9TEJ3T7">第十六届大广赛湖北赛区省级优秀奖、校级乙等奖学金、优秀共青团员</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" data-page-node-id="E5ywsMYU1KRwO9gCIpFGso">
+      <div class="section-head" data-page-node-id="gxiw2fmmDze8TJ0FgVMuAM">
+        <h2 data-page-node-id="6FpopBHSnb9tIGUHxFiAEs">实习经历</h2>
+        <span class="count" data-page-node-id="NsWVRpGTCxRtDYqPGdsDKW">03 / 05</span>
+      </div>
+      <div class="reveal" data-page-node-id="rvd8Vmb2iF3u8RhRnKd7t2">
+        <div class="exp" data-page-node-id="7rQFjJCZTXB8J3BWWbGEOB">
+          <div class="exp-head" data-page-node-id="2CT34aeBrcOl1s0oZEHyMC">
+            <div data-page-node-id="Uftbs3en2pYdeWATK3I5WY">
+              <div class="title" data-page-node-id="wxqTVnmK9zCu2ChoDpDFmS">项目实习生</div>
+              <div class="org" data-page-node-id="8lF8J0ScAwV4TIF8MFm3JP">北辰青年 · 校园行动合伙人项目组</div>
+            </div>
+            <div class="period" data-page-node-id="M0fP2ddEGsXGvDp99rouY8">2026.08 – 2026.09</div>
+          </div>
+          <ul data-page-node-id="Auolh6rm7kFPwkYB1ZeV9q">
+            <li data-page-node-id="3EwQJqUfkBUOirDWJKYcIs"><b data-page-node-id="ghbJRSnHId9dEXFFl16I3u">独立完成「北辰青年校园招募官网」全站整合与 GitHub Pages 部署上线</b>，整合团队内容与海报素材、独立完成页面视觉设计（含 Logo 反复设计改版）、交互开发与整体运行，把线下项目推到可访问的线上站点；</li>
+            <li data-page-node-id="PPjkm8i7kmEkz1l9aP6ylM">参与「成长状态互动测试」模块设计（题库团队共同设计、选项团队讨论执笔），支撑招募官网的调研数据可视化呈现；</li>
+            <li data-page-node-id="4H2HbSSyAUDKpSHpPDfTkk">团队共同分发回收 <span class="highlight-num" data-page-node-id="ya4bgD4ehVfqOxlzeC3AJf">264 份</span>问卷；按年龄分层独立完成所属群体深度访谈（含 <span class="highlight-num" data-page-node-id="w3TWZN7UtxuAhCOnVuskAp">1 小时</span>结构化访谈），提炼用户洞察；</li>
+            <li data-page-node-id="YZqSX7hs9uKGuxwtKpcr4G">全程使用 ChatGPT / DeepSeek 辅助内容设计与文案打磨；第三周担任面试官完成 <span class="highlight-num" data-page-node-id="jxmT2fWFnTgRfMOhXfy4Ai">19 分钟</span>线上结构化面试（跨部门协作 / 履约一致性 / 自我认知维度）。</li>
+          </ul>
+        </div>
+
+        <div class="exp" data-page-node-id="8uxWNatv1CdFXigXCd6auv">
+          <div class="exp-head" data-page-node-id="Vm4gliGrF3t6D02KOPAtpE">
+            <div data-page-node-id="7HLuMiWhHHteWt6AenyrIB">
+              <div class="title" data-page-node-id="h68XzfXFNpGEnVHygnub0J">AI 内容标注实习生</div>
+              <div class="org" data-page-node-id="ZYsZJDezEmrdA6V2Qbv0lM">科大讯飞股份有限公司</div>
+            </div>
+            <div class="period" data-page-node-id="yipkZaAung5Gm8OoTQqFGl">2025.04 – 2025.06</div>
+          </div>
+          <ul data-page-node-id="sOcFJipNZ05GohnAfB3ntC">
+            <li data-page-node-id="YAmnvo96HsfoIlRmHTTKn5">负责 AI 训练文本、语音素材的情感分类与合规校验，累计完成 <span class="highlight-num" data-page-node-id="rZ2FSx2g1Y2hecvReW4D0g">1.4 万余条</span>内容审核，标注准确率稳定 <span class="highlight-num" data-page-node-id="F0kjAJRxPJd0NzGBsWECUC">98.5%</span>；</li>
+            <li data-page-node-id="HfkJXG4nCnVy1JBB8PNo5h">归纳高频错误样本，输出统一标注校验细则，降低团队二次复核工作量 <span class="highlight-num" data-page-node-id="ZE15bT1b27QOKJytZnsq4D">15%</span>，严格遵守信息保密制度。</li>
+          </ul>
+        </div>
+
+        <div class="exp" data-page-node-id="Fk9TF1Ivc3fFDX36g8okG1">
+          <div class="exp-head" data-page-node-id="NgZBf62OeOGlPXCynpT3RN">
+            <div data-page-node-id="WANNNcSUHobXNCslwVgmES">
+              <div class="title" data-page-node-id="4np160qc1BEWDcXRFkxa3x">宣传运营实习生</div>
+              <div class="org" data-page-node-id="W7HAVs91yzaq1jIyY8uxjS">鄂州市杏福园旅游区</div>
+            </div>
+            <div class="period" data-page-node-id="4KidWCzHiforQTova3FRjx">2023.09 – 2023.11</div>
+          </div>
+          <ul data-page-node-id="0CsBcloBYFemcjEWZDq3A4">
+            <li data-page-node-id="l12gzzIGvodETOPVYedT6w"><b data-page-node-id="CHRdrgeOC2XV8lSurf5k28">短视频创作：</b>团队协作中负责内容板块，独立完成 <span class="highlight-num" data-page-node-id="0vW92QVDxdoCnZ3SaGnqLW">20 余条</span>文旅宣传短视频的「选题策划 → 实景拍摄 → 剪辑 → 平台发布」全流程；</li>
+            <li data-page-node-id="EuBhKffFq6FD8vGxPt2zUD"><b data-page-node-id="uPaumYSYVMpjPKEtVrUaoQ">双平台运营：</b>参与抖音、小红书双品牌账号运营，账号内容总播放量突破 <span class="highlight-num" data-page-node-id="UgSyvQaLHIZ90FsjwlEKlB">8w+</span>，企业线上品牌曝光提升 20%，国庆期间成功转化近 <span class="highlight-num" data-page-node-id="EW33hdx6GIsc0vVQNFs0Xe">1w</span>线下客流。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" data-page-node-id="cbUdtEVDdv1Bz5FyAeCWFu">
+      <div class="section-head" data-page-node-id="imfiCCnV9VrIYBU4eyLa61">
+        <h2 data-page-node-id="f956w8OXF0luPsR6giEcYb">项目 / 实践</h2>
+        <span class="count" data-page-node-id="1FUpoWRCQpKYwUkB4VguKU">04 / 05</span>
+      </div>
+      <div class="reveal" data-page-node-id="TJrEqcSWar6jTFVQ5EnEPf">
+        <div class="exp" data-page-node-id="1fSvPAQog2zr9Vyhd0olQN">
+          <div class="exp-head" data-page-node-id="9mW8GrzHtBoUcRH3iLHkoE">
+            <div class="title" data-page-node-id="CuziTgASGt30l7nduVfa1E">校园品牌活动统筹（跨校协作）</div>
+          </div>
+          <ul data-page-node-id="utJPNZZBUqXqutAre6PDZ9">
+            <li data-page-node-id="8GPvEBg41e2C497pOiK7dn"><b data-page-node-id="GsppSumuOYzLq26ElcHmAX">「书香长江」青春读书会（2025.09）：</b>参与 15 校系列活动，负责跨校协作统筹，制作系列短视频、推文，获湖北教育频道、湖北日报等媒体转载；</li>
+            <li data-page-node-id="k8XLhU0b6TZuPvDwGaK35K"><b data-page-node-id="ds6bBkQgeyVSEemwxKBL1b">「大手拉小手」主题活动（2025.12）：</b>联合新华书店集团及 5 所院校，策划执行 <span class="highlight-num" data-page-node-id="BKbWVlEPQB8TYFztS76udY">300 余人</span>线下活动，负责宣传策划、现场拍摄及新闻撰稿，稿件获荆楚网、长江云、学习强国、湖北日报等多家媒体报道。</li>
+          </ul>
+        </div>
+
+        <div class="exp" data-page-node-id="m1pE5TqIwCwZ9tzSwIBx3W">
+          <div class="exp-head" data-page-node-id="cCsYp0HZGCl3p8Wq9UjonI">
+            <div class="title" data-page-node-id="F7mZlz1d0sBVsoOB9SYaZ4">品牌传播与公关内容</div>
+          </div>
+          <ul data-page-node-id="V1Yd47neYIFqamB3Zod1PO">
+            <li data-page-node-id="bdmCeAXvNmt69fTieiNCZV"><b data-page-node-id="HHM5JxJM5c5d7eg3VqGyyu">黄麻起义纪念园青春回访（2025.11）：</b>与中国青年网合作拍摄《红色精神薪火传：黄麻起义纪念园迎来青春回响》宣传视频，<span class="highlight-num" data-page-node-id="INmNX6MC0k6R0R3urRqzl6">全网阅读量超 30W</span>；</li>
+            <li data-page-node-id="AID0Hl7LDE4p1KhLdLJPEw"><b data-page-node-id="KVqoBJCFaXMnkmHDQPlMEu">长江书市 · 武汉童书展（2026.04）：</b>首义广场站活动以「红色研学 + 情景演绎」创新形式推动红色文化传播，负责全程拍摄记录与通讯稿撰写。</li>
+          </ul>
+        </div>
+
+        <div class="exp" data-page-node-id="btBV3u2l4D78DWEQ6Y3Mq2">
+          <div class="exp-head" data-page-node-id="aZ3eLCAqHeWJd3vbXlMO7h">
+            <div class="title" data-page-node-id="XZQaHROk1UiiWTChkH4FpJ">用户洞察与体验创新</div>
+          </div>
+          <ul data-page-node-id="0PoaVblppzGRIHC2tWsqU4">
+            <li data-page-node-id="hhajYlHZTMRAlgCiNHMtfV">跨文化交流项目中，策划并推动落地微信互动小程序，搭建中外青少年结对探索任务系统，服务参与人数 <span class="highlight-num" data-page-node-id="AfrjZcVB6qcHKDZhkBXp3Q">100+</span>人，用户好评率 <span class="highlight-num" data-page-node-id="NiKQLandjYUKrSOrUW49R5">95%+</span>。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" data-page-node-id="7rqWZk1kgYh5U4JSgLxvPb">
+      <div class="section-head" data-page-node-id="NpbO5DEwCeZ6r4nkdGMwCz">
+        <h2 data-page-node-id="S7HNWnD9ZzDzGn7aSL2MCu">技能 & 工具</h2>
+        <span class="count" data-page-node-id="xeIyfD3E8y3MidiayL4RRA">05 / 05</span>
+      </div>
+      <div class="skills reveal" data-page-node-id="7bsfpobwszGC8lcbAkhFil">
+        <div class="skill-group" data-page-node-id="Ny783CW2IfMYUH0LMlalhg">
+          <div class="label" data-page-node-id="DCwiTwGfojvo2Y8QXXVeNW">平台能力</div>
+          <p data-page-node-id="D4P5PYnQ8PGrbjyZUehayF">深度熟悉抖音、小红书平台内容生态与流量机制，有实操运营及数据复盘经验。</p>
+        </div>
+        <div class="skill-group" data-page-node-id="ji74Uo0gtgjhACFm1E8Sjc">
+          <div class="label" data-page-node-id="wN1Om1MoSLnVhDo3cgjw6P">内容制作</div>
+          <p data-page-node-id="6jMqA8ivBJHOAy0jbKITKA">熟练使用 Premiere Pro、剪映完成短视频剪辑；具备公众号排版、海报文案能力；Word / PPT / Excel 完成宣传方案与传播数据复盘。</p>
+        </div>
+        <div class="skill-group" data-page-node-id="zciF6nDSeRLL1HezyHq0N3">
+          <div class="label" data-page-node-id="8n7K7ihf9a6aTPBjNIY7oC">AI 工具</div>
+          <p data-page-node-id="PAAFEor4UBs4GgiHHznla6">用 ChatGPT / Codex / WorkBuddy 辅助内容策划与文案生成，可完成网页搭建（GitHub Pages 部署经验）；用即梦、可灵做 AI 图文与短视频。</p>
+          <div class="tags" data-page-node-id="blB9zMuwsA9P7eeghDt0iP">
+            <span data-page-node-id="iJ1QZkngIQO7mvTtVm1qcM">ChatGPT</span><span data-page-node-id="TjV1jqGaVFdUBW1vYbuotH">Codex</span><span data-page-node-id="5QN6iBvHyoGNwB0V3aZh9o">WorkBuddy</span><span data-page-node-id="n3OqhaCFxAegN7Mc5Fo0FR">DeepSeek</span><span data-page-node-id="eimVHZqk3G2gYOAO7zMs9F">豆包</span><span data-page-node-id="S8OCugzYTjCLCAlRPruZLQ">即梦</span><span data-page-node-id="KMIYmnxTVwtt9A4cNHHPDb">可灵</span>
+          </div>
+        </div>
+        <div class="skill-group" data-page-node-id="EOjN56F4cNICNmeabNTO75">
+          <div class="label" data-page-node-id="0ClAodkwsEBGVf6nQD3ywS">证书</div>
+          <p data-page-node-id="UCVgPEfXL0Z2XCGIqUP0mU">大学英语四六级、普通话二级甲等、Office 计算机二级、教师资格证书。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <footer id="contact" class="contact-foot" data-page-node-id="mtU0DqfEakkPOVx1auFCtq">
+      <div data-page-node-id="l78h2e3peYA1g6Bbb3J4dg">© <span id="year" data-page-node-id="58xWdlECapg2z8zES73wZ1"></span> 吴瑶誉 · 持续更新</div>
+      <div class="links" data-page-node-id="bWS1kpUuSpdMYMqnVEJQip">
+        <a href="mailto:18607236875@163.com" data-page-node-id="BiPO8A58ePIvetoRGpbLeS">邮箱</a>
+        <a href="tel:18607236875" data-page-node-id="H83hCjHK62z4n6qbCUL2Hv">电话</a>
+        <a href="assets/吴瑶誉简历_品牌营销实习生.pdf" download data-page-node-id="4bP6nFCsUJJVuB5VFIXwEZ">PDF 简历</a>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  // 年份
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // 明暗模式
+  const htmlEl = document.documentElement;
+  const themeBtn = document.getElementById('themeBtn');
+  const iconSun = document.getElementById('iconSun');
+  const STORAGE_KEY = 'fanfan-theme';
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored) htmlEl.setAttribute('data-theme', stored);
+  function syncIcon() {
+    const dark = htmlEl.getAttribute('data-theme') === 'dark';
+    iconSun.innerHTML = dark
+      ? '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>'
+      : '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>';
+  }
+  syncIcon();
+  themeBtn.addEventListener('click', () => {
+    const next = htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    htmlEl.setAttribute('data-theme', next);
+    localStorage.setItem(STORAGE_KEY, next);
+    syncIcon();
+  });
+
+  // 滚动：当前章节高亮
+  const navLinks = document.querySelectorAll('.sidenav nav a');
+  const sections = ['about', 'education', 'experience', 'projects', 'skills']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-30% 0px -55% 0px', threshold: 0 });
+  sections.forEach(s => io.observe(s));
+
+  // 滚动入场动画
+  const reveals = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        ro.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => ro.observe(el));
+
+  // 移动端菜单
+  const sidenav = document.getElementById('sidenav');
+  const menuBtn = document.getElementById('menuBtn');
+  menuBtn.addEventListener('click', () => sidenav.classList.toggle('is-open'));
+  sidenav.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => sidenav.classList.remove('is-open')));
+</script>
+</body>
+</html>
